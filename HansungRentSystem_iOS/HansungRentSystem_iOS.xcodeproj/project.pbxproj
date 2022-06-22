@@ -13,6 +13,11 @@
 		910E5DB12862FCFC004D3141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DAF2862FCFC004D3141 /* Main.storyboard */; };
 		910E5DB32862FCFD004D3141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DB22862FCFD004D3141 /* Assets.xcassets */; };
 		910E5DB62862FCFD004D3141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DB42862FCFD004D3141 /* LaunchScreen.storyboard */; };
+		910E5DBE28630083004D3141 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DBD28630083004D3141 /* img.jpg */; };
+		910E5DCB2863354A004D3141 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DC728633549004D3141 /* apple.jpg */; };
+		910E5DCC2863354A004D3141 /* Lg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DC828633549004D3141 /* Lg.jpg */; };
+		910E5DCD2863354A004D3141 /* MSI.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DC928633549004D3141 /* MSI.jpg */; };
+		910E5DCE2863354A004D3141 /* samsung.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DCA28633549004D3141 /* samsung.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		910E5DB22862FCFD004D3141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		910E5DB52862FCFD004D3141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910E5DB72862FCFD004D3141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		910E5DBD28630083004D3141 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
+		910E5DC728633549004D3141 /* apple.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apple.jpg; sourceTree = "<group>"; };
+		910E5DC828633549004D3141 /* Lg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lg.jpg; sourceTree = "<group>"; };
+		910E5DC928633549004D3141 /* MSI.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MSI.jpg; sourceTree = "<group>"; };
+		910E5DCA28633549004D3141 /* samsung.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = samsung.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DB42862FCFD004D3141 /* LaunchScreen.storyboard */,
 				910E5DB72862FCFD004D3141 /* Info.plist */,
+				910E5DBD28630083004D3141 /* img.jpg */,
+				910E5DC728633549004D3141 /* apple.jpg */,
+				910E5DC828633549004D3141 /* Lg.jpg */,
+				910E5DC928633549004D3141 /* MSI.jpg */,
+				910E5DCA28633549004D3141 /* samsung.jpg */,
 			);
 			path = HansungRentSystem_iOS;
 			sourceTree = "<group>";
@@ -125,9 +140,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910E5DCE2863354A004D3141 /* samsung.jpg in Resources */,
+				910E5DCC2863354A004D3141 /* Lg.jpg in Resources */,
 				910E5DB62862FCFD004D3141 /* LaunchScreen.storyboard in Resources */,
 				910E5DB32862FCFD004D3141 /* Assets.xcassets in Resources */,
+				910E5DCD2863354A004D3141 /* MSI.jpg in Resources */,
 				910E5DB12862FCFC004D3141 /* Main.storyboard in Resources */,
+				910E5DBE28630083004D3141 /* img.jpg in Resources */,
+				910E5DCB2863354A004D3141 /* apple.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
