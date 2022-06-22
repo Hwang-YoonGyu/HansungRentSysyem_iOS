@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+class Login: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
