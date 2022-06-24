@@ -9,4 +9,12 @@ import Foundation
 import UIKit
 class Main : UIViewController {
     
+    @IBOutlet weak var userText: UILabel!
+    
+    var userName : String = ""
+    var userId : String = ""
+    
+    override func viewDidLoad() {
+        userText.text = userId + " " + userName
+    }
 }

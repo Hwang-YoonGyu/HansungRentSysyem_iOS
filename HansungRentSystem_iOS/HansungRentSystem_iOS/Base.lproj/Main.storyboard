@@ -11,7 +11,7 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Login" title="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" id="BYZ-38-t0r" customClass="Login" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
+                                <connections>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKM-hd-6Zy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-lo-Kx5">
                                 <rect key="frame" x="217" y="623" width="100" height="50"/>
@@ -68,6 +71,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="회원가입"/>
+                                <connections>
+                                    <action selector="joinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xp6-uH-fYZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,6 +94,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLJ-ji-akP"/>
+                    <connections>
+                        <outlet property="idField" destination="sMI-IL-rmr" id="0rg-n0-Wfz"/>
+                        <outlet property="pwdField" destination="djy-o4-GcJ" id="vEL-uT-vmk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +106,7 @@
         <!--Main-->
         <scene sceneID="5KR-3d-guj">
             <objects>
-                <viewController storyboardIdentifier="Main" title="Main" id="ugh-JI-HO4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" title="Main" id="ugh-JI-HO4" customClass="Main" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O4z-w7-d7E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,12 +117,12 @@
                                     <constraint firstAttribute="width" constant="150" id="E0w-E3-5WI"/>
                                     <constraint firstAttribute="height" constant="30" id="Gkx-AL-UFb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70G-bB-1QF">
-                                <rect key="frame" x="7" y="248" width="200" height="200"/>
+                                <rect key="frame" x="7" y="298" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="JOJ-Nq-pzl"/>
                                     <constraint firstAttribute="width" constant="200" id="P0j-he-Tk5"/>
@@ -121,31 +131,31 @@
                                 <buttonConfiguration key="configuration" style="filled" title="기자재 조회"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-D3-uF7">
-                                <rect key="frame" x="207" y="448" width="200" height="200"/>
+                                <rect key="frame" x="207" y="498" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9SB-x0-FC7"/>
                                     <constraint firstAttribute="height" constant="200" id="gRz-jh-JVZ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="앱 종료"/>
+                                <buttonConfiguration key="configuration" style="filled" title="로그아웃"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-Wt-GDR">
-                                <rect key="frame" x="7" y="448" width="200" height="200"/>
+                                <rect key="frame" x="7" y="498" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="TxH-VM-LPO"/>
                                     <constraint firstAttribute="height" constant="200" id="qvJ-sL-Fvh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="공지사항"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="알림"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqp-va-rWA">
-                                <rect key="frame" x="207" y="248" width="200" height="200"/>
+                                <rect key="frame" x="207" y="298" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="SSc-wo-a6S"/>
                                     <constraint firstAttribute="height" constant="200" id="bKi-Ml-9a5"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="마이페이지"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="대여 로그"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hansung.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-HO-Y19">
                                 <rect key="frame" x="234" y="54" width="180" height="40"/>
@@ -154,24 +164,51 @@
                                     <constraint firstAttribute="height" constant="40" id="oWw-Xi-0Wr"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="없음" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-BH-7kk">
+                                <rect key="frame" x="40" y="228" width="334" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6F5-Vy-eM3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 대여중인 기자재" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-KW-fJ1">
+                                <rect key="frame" x="40" y="188" width="334" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dvx-Xp-1BO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBP-UA-qEC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Scy-BH-7kk" firstAttribute="leading" secondItem="eBP-UA-qEC" secondAttribute="leading" constant="40" id="1Gd-8P-hHy"/>
                             <constraint firstItem="fqp-va-rWA" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="100" id="1gB-s8-SzG"/>
+                            <constraint firstItem="fqp-va-rWA" firstAttribute="top" secondItem="Scy-BH-7kk" secondAttribute="bottom" constant="40" id="4K9-vv-0Ls"/>
                             <constraint firstItem="YK6-Wt-GDR" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="-100" id="5IJ-7j-8dx"/>
                             <constraint firstItem="70G-bB-1QF" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="-100" id="8Ge-jz-8W8"/>
                             <constraint firstItem="9kj-WA-AIu" firstAttribute="top" secondItem="eBP-UA-qEC" secondAttribute="top" constant="20" id="BCg-Qm-O0u"/>
                             <constraint firstItem="vmr-D3-uF7" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="100" id="D5X-zS-dPD"/>
-                            <constraint firstItem="fqp-va-rWA" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="-100" id="H9F-Ba-k8v"/>
-                            <constraint firstItem="vmr-D3-uF7" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="100" id="Jyp-fk-G4Z"/>
+                            <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="Scy-BH-7kk" secondAttribute="trailing" constant="40" id="Gp3-Sx-rul"/>
+                            <constraint firstItem="fqp-va-rWA" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="-50" id="H9F-Ba-k8v"/>
+                            <constraint firstItem="vmr-D3-uF7" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="150" id="Jyp-fk-G4Z"/>
+                            <constraint firstItem="Scy-BH-7kk" firstAttribute="top" secondItem="5sz-KW-fJ1" secondAttribute="bottom" constant="10" id="P8C-oK-Prj"/>
                             <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="hH0-HO-Y19" secondAttribute="trailing" id="Syu-lH-phi"/>
-                            <constraint firstItem="YK6-Wt-GDR" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="100" id="TsM-e8-l01"/>
-                            <constraint firstItem="70G-bB-1QF" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="-100" id="n7V-7F-mdS"/>
+                            <constraint firstItem="YK6-Wt-GDR" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="150" id="TsM-e8-l01"/>
+                            <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="5sz-KW-fJ1" secondAttribute="trailing" constant="40" id="d9a-1j-Jv8"/>
+                            <constraint firstItem="70G-bB-1QF" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="-50" id="n7V-7F-mdS"/>
                             <constraint firstItem="9kj-WA-AIu" firstAttribute="leading" secondItem="eBP-UA-qEC" secondAttribute="leading" constant="20" id="ngU-VZ-d0y"/>
                             <constraint firstItem="hH0-HO-Y19" firstAttribute="top" secondItem="eBP-UA-qEC" secondAttribute="top" constant="10" id="oXF-oo-HXY"/>
+                            <constraint firstItem="5sz-KW-fJ1" firstAttribute="leading" secondItem="eBP-UA-qEC" secondAttribute="leading" constant="40" id="qIc-fm-U0d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userText" destination="9kj-WA-AIu" id="P88-LW-4sn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15u-hT-iot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +217,7 @@
         <!--Notice-->
         <scene sceneID="1VY-gj-Ot4">
             <objects>
-                <viewController storyboardIdentifier="Notice" title="Notice" id="o7t-3f-Gub" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Notice" title="Notice" id="o7t-3f-Gub" customClass="Notice" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hyF-TG-iMd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,14 +236,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KQt-C5-0vF">
-                                        <rect key="frame" x="0.0" y="44.5" width="394" height="150.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="394" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KQt-C5-0vF" id="lB4-9a-xmu">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="150.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="50.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-06-23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISZ-3P-zRg">
-                                                    <rect key="frame" x="20" y="11" width="100" height="128.5"/>
+                                                    <rect key="frame" x="20" y="11" width="100" height="28.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="P4h-Nj-F3a"/>
                                                     </constraints>
@@ -214,11 +251,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="안녕하세요 애플리케이션 개발팀 &quot;민수는 행복해&quot; 입니다. 반납일자는 꼭 지켜주세요 :)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MtP-uX-Dh8">
-                                                    <rect key="frame" x="120" y="0.0" width="274" height="150.5"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="승인되었습니다." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MtP-uX-Dh8">
+                                                    <rect key="frame" x="120" y="0.0" width="274" height="50.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="150" id="Clj-qq-wB4"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Clj-qq-wB4"/>
                                                     </constraints>
                                                     <color key="textColor" systemColor="labelColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -270,7 +307,7 @@
         <!--Detail-->
         <scene sceneID="5qN-qQ-EvA">
             <objects>
-                <viewController storyboardIdentifier="Detail" title="Detail" id="NEl-Wb-fXn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" title="Detail" id="NEl-Wb-fXn" customClass="Detail" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lf6-IJ-P2t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,7 +439,7 @@
         <!--Ask-->
         <scene sceneID="8yc-TC-Z1z">
             <objects>
-                <viewController storyboardIdentifier="Ask" title="Ask" id="WOR-dj-awR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ask" title="Ask" id="WOR-dj-awR" customClass="Ask" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fzr-Ct-i7W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +533,7 @@
         <!--List-->
         <scene sceneID="tqx-SH-y5h">
             <objects>
-                <viewController storyboardIdentifier="List" title="List" id="Wne-vE-rXH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="List" title="List" id="Wne-vE-rXH" customClass="List" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ao6-2C-V6T">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -595,9 +632,8 @@
         <!--Navigation Controller-->
         <scene sceneID="q1X-ID-0Nd">
             <objects>
-                <navigationController id="rcG-1a-TTG" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="rcG-1a-TTG" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tR7-ed-4dE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -608,10 +644,10 @@
             </objects>
             <point key="canvasLocation" x="-716" y="123"/>
         </scene>
-        <!--MyPage-->
+        <!--LogPage-->
         <scene sceneID="YOW-LP-xZq">
             <objects>
-                <viewController storyboardIdentifier="MyPage" title="MyPage" id="Sfd-72-ftA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPage" title="LogPage" id="Sfd-72-ftA" customClass="LogPage" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZpK-8P-MJU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,6 +7,6 @@
 
 import Foundation
 import UIKit
-class MyPage : UIViewController {
+class LogPage : UIViewController {
     
 }
