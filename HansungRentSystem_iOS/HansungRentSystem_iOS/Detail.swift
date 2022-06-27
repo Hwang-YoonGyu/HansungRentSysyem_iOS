@@ -11,5 +11,10 @@ class Detail : UIViewController {
     var user : User!
     var obj : Object!
 
+    @IBAction func backBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
+    @IBAction func rentBtn(_ sender: UIButton) {
+    }
 }

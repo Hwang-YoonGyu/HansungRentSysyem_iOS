@@ -10,4 +10,7 @@ import UIKit
 class Notice : UIViewController {
     var user : User!
 
+    @IBAction func bakcBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }

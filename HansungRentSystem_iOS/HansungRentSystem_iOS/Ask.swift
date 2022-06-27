@@ -11,4 +11,8 @@ class Ask : UIViewController {
     var user : User!
 
     
+    @IBAction func backBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+        print("@@@@@@@@@@@@@@@@")
+    }
 }

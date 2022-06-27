@@ -23,7 +23,7 @@ class Login: UIViewController {
         let task = URLSession.shared.dataTask(with: requset as URLRequest) {
             data, response, error in
             if error != nil {
-                print("error")
+                print("http connect error")
                 return
             }
             if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
@@ -56,7 +56,6 @@ class Login: UIViewController {
             }
         }
         task.resume()
-        print("@@@@@@@@@@@@@@@@@")
         
 
     }

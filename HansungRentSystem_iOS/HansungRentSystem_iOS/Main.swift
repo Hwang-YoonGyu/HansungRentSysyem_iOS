@@ -33,14 +33,14 @@ class Main : UIViewController {
         }
     }
     
-    @IBAction func NotificationBtn(_ sender: UIButton) {
+    @IBAction func noticeBtn(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
             nvc.user = self.user
             self.navigationController?.pushViewController(nvc, animated: true)
         }
-        
     }
+    
     
     @IBAction func LogoutBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
