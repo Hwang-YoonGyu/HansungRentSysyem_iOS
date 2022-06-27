@@ -8,5 +8,6 @@
 import Foundation
 import UIKit
 class LogPage : UIViewController {
-    
+    var user : User!
+
 }

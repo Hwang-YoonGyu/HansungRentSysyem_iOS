@@ -9,4 +9,12 @@ import Foundation
 import UIKit
 class List : UIViewController {
     
+    var user : User!
+    var objList = [Object]()
+    
+    override func viewDidLoad() {
+        
+    }
+    
+
 }

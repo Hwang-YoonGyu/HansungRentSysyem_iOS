@@ -52,7 +52,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S7-t5-zjX">
-                                <rect key="frame" x="97" y="623" width="100" height="50"/>
+                                <rect key="frame" x="157" y="623" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Gx2-2Y-QlW"/>
                                     <constraint firstAttribute="height" constant="50" id="LCw-7m-5WJ"/>
@@ -63,24 +63,11 @@
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKM-hd-6Zy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-lo-Kx5">
-                                <rect key="frame" x="217" y="623" width="100" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ai5-OD-ueg"/>
-                                    <constraint firstAttribute="width" constant="100" id="dYe-PN-A34"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="회원가입"/>
-                                <connections>
-                                    <action selector="joinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xp6-uH-fYZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fTc-lo-Kx5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="200" id="Api-TL-Xi1"/>
-                            <constraint firstItem="5S7-t5-zjX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60" id="IuQ-A8-uP1"/>
+                            <constraint firstItem="5S7-t5-zjX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IuQ-A8-uP1"/>
                             <constraint firstItem="sMI-IL-rmr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K69-Y5-vID"/>
                             <constraint firstItem="4Ht-0m-nJN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="KXA-OO-95a"/>
                             <constraint firstItem="sMI-IL-rmr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="KpU-ZA-Arh"/>
@@ -90,7 +77,6 @@
                             <constraint firstItem="Wnd-gR-cfn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="bsp-2k-xbT"/>
                             <constraint firstItem="4Ht-0m-nJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fnP-Uh-Fpx"/>
                             <constraint firstItem="djy-o4-GcJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rEF-gv-EVm"/>
-                            <constraint firstItem="fTc-lo-Kx5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="60" id="urR-w2-KNf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aLJ-ji-akP"/>
@@ -129,6 +115,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="기자재 조회"/>
+                                <connections>
+                                    <action selector="ListBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="x2s-xj-MpT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-D3-uF7">
                                 <rect key="frame" x="207" y="498" width="200" height="200"/>
@@ -138,6 +127,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그아웃"/>
+                                <connections>
+                                    <action selector="LogoutBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="wpS-Ag-B8u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-Wt-GDR">
                                 <rect key="frame" x="7" y="498" width="200" height="200"/>
@@ -156,6 +148,10 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="대여 로그"/>
+                                <connections>
+                                    <action selector="LogBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="l24-7F-kZT"/>
+                                    <action selector="NotificationBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="Pkb-iN-TFC"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hansung.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-HO-Y19">
                                 <rect key="frame" x="234" y="54" width="180" height="40"/>
@@ -223,10 +219,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7s-7c-NQz">
-                                <rect key="frame" x="15" y="44" width="80" height="20"/>
+                                <rect key="frame" x="0.0" y="44" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="11X-tz-hj0"/>
-                                    <constraint firstAttribute="width" constant="80" id="PsU-W4-Aqg"/>
+                                    <constraint firstAttribute="width" constant="100" id="PsU-W4-Aqg"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
@@ -288,7 +284,7 @@
                         <viewLayoutGuide key="safeArea" id="woe-ol-1CC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="f7s-7c-NQz" firstAttribute="leading" secondItem="woe-ol-1CC" secondAttribute="leading" constant="15" id="4kZ-9G-wOs"/>
+                            <constraint firstItem="f7s-7c-NQz" firstAttribute="leading" secondItem="woe-ol-1CC" secondAttribute="leading" id="4kZ-9G-wOs"/>
                             <constraint firstItem="0Zr-gk-cWD" firstAttribute="trailing" secondItem="woe-ol-1CC" secondAttribute="trailing" constant="-10" id="Hea-r2-Di2"/>
                             <constraint firstItem="woe-ol-1CC" firstAttribute="bottom" secondItem="sop-jK-VHI" secondAttribute="bottom" constant="10" id="MHg-Ve-c3v"/>
                             <constraint firstItem="0Zr-gk-cWD" firstAttribute="top" secondItem="woe-ol-1CC" secondAttribute="top" id="TxR-sQ-PZ3"/>
@@ -496,10 +492,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vv7-GN-Ldu">
-                                <rect key="frame" x="15" y="44" width="80" height="20"/>
+                                <rect key="frame" x="15" y="44" width="100" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="Eai-Nn-zz4"/>
-                                    <constraint firstAttribute="width" constant="80" id="Oou-ae-mQW"/>
+                                    <constraint firstAttribute="height" id="Eai-Nn-zz4"/>
+                                    <constraint firstAttribute="width" constant="100" id="Oou-ae-mQW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
@@ -539,10 +535,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-kf-VP0">
-                                <rect key="frame" x="15" y="44" width="80" height="20"/>
+                                <rect key="frame" x="15" y="44" width="100" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="jjM-QT-nhe"/>
-                                    <constraint firstAttribute="height" constant="20" id="uUx-ee-87R"/>
+                                    <constraint firstAttribute="width" constant="100" id="jjM-QT-nhe"/>
+                                    <constraint firstAttribute="height" id="uUx-ee-87R"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
@@ -653,10 +649,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAU-AG-9zH">
-                                <rect key="frame" x="15" y="44" width="80" height="20"/>
+                                <rect key="frame" x="15" y="44" width="100" height="0.0"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="pDM-tR-Cys"/>
-                                    <constraint firstAttribute="height" constant="20" id="tbi-dm-obW"/>
+                                    <constraint firstAttribute="width" constant="100" id="pDM-tR-Cys"/>
+                                    <constraint firstAttribute="height" id="tbi-dm-obW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>

@@ -8,5 +8,6 @@
 import Foundation
 import UIKit
 class Notice : UIViewController {
-    
+    var user : User!
+
 }

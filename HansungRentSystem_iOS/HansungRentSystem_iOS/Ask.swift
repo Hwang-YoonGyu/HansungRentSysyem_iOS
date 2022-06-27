@@ -8,5 +8,7 @@
 import Foundation
 import UIKit
 class Ask : UIViewController {
+    var user : User!
+
     
 }

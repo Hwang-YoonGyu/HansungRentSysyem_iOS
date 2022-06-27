@@ -13,18 +13,10 @@ class Login: UIViewController {
     @IBOutlet weak var pwdField: UITextField!
     @IBOutlet weak var idField: UITextField!
     
-    
-    @IBAction func joinBtn(_ sender: UIButton) {
-        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Join") as? Main {
-            
-            navigationController?.pushViewController(mvc, animated: true)
 
-        }
-    }
     @IBAction func loginBtn(_ sender: UIButton) {
         
-        let requset = NSMutableURLRequest(url: NSURL(string: "http://192.168.0.2:8080/API/login?userId="+idField.text!+"&password="+pwdField.text!)! as URL)
+        let requset = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/login?userId="+idField.text!+"&password="+pwdField.text!)! as URL)
         requset.httpMethod = "GET"
         
         
@@ -47,8 +39,7 @@ class Login: UIViewController {
                         DispatchQueue.main.sync {
                             let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
                             if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Main") as? Main {
-                                mvc.userName = dicData["userName"]! as! String
-                                mvc.userId = dicData["id"]! as! String
+                                mvc.user = User(userId: dicData["id"]! as! String, password: dicData["password"]! as! String, userName: dicData["userName"]! as! String, isRented: dicData["isRented"]! as! String)
                                 self.navigationController?.pushViewController(mvc, animated: true)
                             }
                         }
@@ -69,13 +60,7 @@ class Login: UIViewController {
         
 
     }
-    func gotoMain() {
-        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Main") as? Main {                            self.navigationController?.pushViewController(mvc, animated: true)
-        }
-    }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

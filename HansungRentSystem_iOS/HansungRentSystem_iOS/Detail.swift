@@ -8,5 +8,8 @@
 import Foundation
 import UIKit
 class Detail : UIViewController {
+    var user : User!
+    var obj : Object!
+
     
 }
