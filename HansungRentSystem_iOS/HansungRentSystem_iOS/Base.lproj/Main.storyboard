@@ -459,6 +459,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="LG gram"/>
+                                <connections>
+                                    <action selector="lgBtn:" destination="WOR-dj-awR" eventType="touchUpInside" id="Nqt-w9-MGW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvQ-pJ-93Y">
                                 <rect key="frame" x="107" y="458" width="200" height="50"/>
@@ -468,6 +471,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="MSI Sword"/>
+                                <connections>
+                                    <action selector="msiBtn:" destination="WOR-dj-awR" eventType="touchUpInside" id="bV3-ih-GQs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlf-gw-okp">
                                 <rect key="frame" x="107" y="528" width="200" height="50"/>
@@ -477,6 +483,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Apple MacBook"/>
+                                <connections>
+                                    <action selector="appleBtn:" destination="WOR-dj-awR" eventType="touchUpInside" id="Gen-ag-QvG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-jR-oAr">
                                 <rect key="frame" x="107" y="318" width="200" height="50"/>
@@ -486,6 +495,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Samsung Odyssey"/>
+                                <connections>
+                                    <action selector="samsungBtn:" destination="WOR-dj-awR" eventType="touchUpInside" id="4Vg-zd-BbY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기자재 조회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0s-YX-RlM">
                                 <rect key="frame" x="150.5" y="94" width="113.5" height="30"/>
