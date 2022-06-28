@@ -576,7 +576,7 @@
                                 <rect key="frame" x="10" y="144" width="394" height="708"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="XSQ-a6-NM7">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListTableViewCell" id="XSQ-a6-NM7" customClass="ObjTableViewCell" customModule="HansungRentSystem_iOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="394" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XSQ-a6-NM7" id="0C5-Yc-4xf">
@@ -584,9 +584,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MacBook Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N02-mk-1v6">
-                                                    <rect key="frame" x="10" y="0.0" width="150" height="50.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="120" height="50.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="UzK-S3-UEB"/>
+                                                        <constraint firstAttribute="width" constant="120" id="UzK-S3-UEB"/>
                                                         <constraint firstAttribute="height" constant="50" id="j70-wu-xWV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -594,24 +594,25 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F080001-2017-100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzn-Vn-D80">
-                                                    <rect key="frame" x="165" y="0.0" width="150" height="50.5"/>
+                                                    <rect key="frame" x="135" y="0.0" width="125.5" height="50.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Okg-Eq-GS6"/>
-                                                        <constraint firstAttribute="width" constant="150" id="XNQ-hl-VbV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJr-e7-bZp">
-                                                    <rect key="frame" x="320" y="5" width="69" height="40.5"/>
+                                                    <rect key="frame" x="304" y="5" width="85" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="j5C-kN-Oyg"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="대여"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="N02-mk-1v6" firstAttribute="top" secondItem="0C5-Yc-4xf" secondAttribute="top" id="3l3-BG-u1P"/>
-                                                <constraint firstItem="JJr-e7-bZp" firstAttribute="leading" secondItem="Nzn-Vn-D80" secondAttribute="trailing" constant="5" id="8LH-0o-idN"/>
                                                 <constraint firstItem="Nzn-Vn-D80" firstAttribute="leading" secondItem="N02-mk-1v6" secondAttribute="trailing" constant="5" id="CrQ-kg-ITx"/>
                                                 <constraint firstItem="N02-mk-1v6" firstAttribute="leading" secondItem="0C5-Yc-4xf" secondAttribute="leading" constant="10" id="DdK-pg-FpK"/>
                                                 <constraint firstAttribute="bottom" secondItem="JJr-e7-bZp" secondAttribute="bottom" constant="5" id="Mr5-OA-e54"/>

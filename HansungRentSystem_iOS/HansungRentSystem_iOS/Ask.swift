@@ -15,9 +15,25 @@ class Ask : UIViewController {
         navigationController?.popViewController(animated: true)
         print("@@@@@@@@@@@@@@@@")
     }
-    
     @IBAction func samsungBtn(_ sender: UIButton) {
-        let requset = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/show/brand=samsung")! as URL)
+        callShowAPI(brand: "samsung")
+        
+    }
+    @IBAction func lgBtn(_ sender: UIButton) {
+        callShowAPI(brand: "lg")
+
+    }
+    @IBAction func msiBtn(_ sender: UIButton) {
+        callShowAPI(brand: "msi")
+
+    }
+    @IBAction func appleBtn(_ sender: UIButton) {
+        callShowAPI(brand: "apple")
+
+    }
+    func callShowAPI(brand: String) {
+        let requset = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/show?brand="+brand)! as URL)
+        print(requset)
         requset.httpMethod = "GET"
         
         
@@ -31,8 +47,6 @@ class Ask : UIViewController {
             
                 let resultString = String(describing: responseString)
                 
-                print(resultString)
-
                 var dicData : Dictionary<String, Any> = [String : Any]()
                     do {
                         // 딕셔너리에 데이터 저장 실시
@@ -40,16 +54,24 @@ class Ask : UIViewController {
                         DispatchQueue.main.sync {
                             let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
                             if let lvc = storyBoard?.instantiateViewController(withIdentifier: "List") as? List {
-
+                                
                                 var objList = [Object]()
-                                for i in 1...(dicData["size"] as! Int) {
-                                    
+
+                                if let data = dicData["Data"] as? [[String : Any]] {
+                                    for i in data {
+                                        let temp = i["status"] as! String
+                                        if temp == "대여가능" {
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as! String, returnDate: i["returnDate"] as! String, userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: true)
+                                            objList.append(obj)
+                                        }
+                                        else {
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as! String, returnDate: i["returnDate"] as! String, userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: false)
+                                            objList.append(obj)
+                                        }
+                                    }
                                 }
-                                
-                                
-                                
-                                
-                                
+                                lvc.objList = objList
+                                lvc.user = self.user
                                 self.navigationController?.pushViewController(lvc, animated: true)
                             }
                         }
@@ -66,13 +88,5 @@ class Ask : UIViewController {
             }
         }
         task.resume()
-        
-    }
-    
-    @IBAction func lgBtn(_ sender: UIButton) {
-    }
-    @IBAction func msiBtn(_ sender: UIButton) {
-    }
-    @IBAction func appleBtn(_ sender: UIButton) {
     }
 }

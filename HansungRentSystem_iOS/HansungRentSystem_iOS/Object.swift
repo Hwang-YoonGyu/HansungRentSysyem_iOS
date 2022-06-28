@@ -12,15 +12,19 @@ class Object {
     var rentDate : String
     var returnDate : String
     var userId : String
-    var userName : String
+    var userPhone : String
+    var status : String
+    var boolRent : Bool
     
-    init(code : String, name : String, rentDate : String, returnDate: String, userId : String, userName : String) {
+    init(code : String, name : String, rentDate : String, returnDate: String, userId : String, userPhone : String, status : String, boolRent: Bool) {
         self.code = code
         self.name = name
         self.rentDate = rentDate
         self.returnDate = returnDate
         self.userId = userId
-        self.userName = userName
+        self.userPhone = userPhone
+        self.status = status
+        self.boolRent = boolRent
     }
     
 }
