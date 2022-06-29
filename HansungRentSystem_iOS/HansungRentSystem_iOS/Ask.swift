@@ -32,12 +32,12 @@ class Ask : UIViewController {
 
     }
     func callShowAPI(brand: String) {
-        let requset = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/show?brand="+brand)! as URL)
-        print(requset)
-        requset.httpMethod = "GET"
+        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/show?brand="+brand)! as URL)
+        print(request)
+        request.httpMethod = "GET"
         
         
-        let task = URLSession.shared.dataTask(with: requset as URLRequest) {
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             if error != nil {
                 print("http connect error")
@@ -61,11 +61,11 @@ class Ask : UIViewController {
                                     for i in data {
                                         let temp = i["status"] as! String
                                         if temp == "대여가능" {
-                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as! String, returnDate: i["returnDate"] as! String, userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: true)
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: "", returnDate: "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: true)
                                             objList.append(obj)
                                         }
                                         else {
-                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as! String, returnDate: i["returnDate"] as! String, userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: false)
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as? String ?? "", returnDate: i["returnDate"] as? String ?? "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: false)
                                             objList.append(obj)
                                         }
                                     }

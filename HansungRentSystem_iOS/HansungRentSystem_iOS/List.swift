@@ -50,7 +50,8 @@ extension List {
         button.addAction { //Action을 유동적으로 달음
             let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
             if let dvc = storyboard?.instantiateViewController(identifier: "Detail") as? Detail {
-
+                dvc.user = self.user
+                dvc.obj = obj
                 self.navigationController?.pushViewController(dvc, animated: true)        
             } else {
                 return

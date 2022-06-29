@@ -438,6 +438,14 @@
                             <constraint firstItem="f5r-Sf-66D" firstAttribute="trailing" secondItem="Qa5-JT-9vH" secondAttribute="trailing" id="yYS-R8-vlO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codeText" destination="oUC-tS-zaz" id="Zq1-ZD-Bmy"/>
+                        <outlet property="idText" destination="GhD-Ro-qjw" id="xqh-Rt-MET"/>
+                        <outlet property="nameText" destination="oya-RY-uHt" id="9Jd-nD-KIF"/>
+                        <outlet property="rentDateText" destination="Qa5-JT-9vH" id="V4g-eA-lHS"/>
+                        <outlet property="returnDateText" destination="aDP-XA-Ksi" id="ZGK-lM-SOi"/>
+                        <outlet property="userNameText" destination="6BU-BR-cfY" id="MlJ-dk-aJD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8RM-Ag-Rcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

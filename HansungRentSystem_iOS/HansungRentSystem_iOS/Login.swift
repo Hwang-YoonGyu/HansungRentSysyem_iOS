@@ -16,11 +16,11 @@ class Login: UIViewController {
 
     @IBAction func loginBtn(_ sender: UIButton) {
         
-        let requset = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/login?userId="+idField.text!+"&password="+pwdField.text!)! as URL)
-        requset.httpMethod = "GET"
+        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/login?userId="+idField.text!+"&password="+pwdField.text!)! as URL)
+        request.httpMethod = "GET"
         
         
-        let task = URLSession.shared.dataTask(with: requset as URLRequest) {
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             if error != nil {
                 print("http connect error")
