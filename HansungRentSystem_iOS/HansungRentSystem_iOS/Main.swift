@@ -26,11 +26,56 @@ class Main : UIViewController {
     }
     
     @IBAction func LogBtn(_ sender: UIButton) {
-        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if let lvc = storyBoard?.instantiateViewController(withIdentifier: "LogPage") as? LogPage {
-            lvc.user = self.user
-            self.navigationController?.pushViewController(lvc, animated: true)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/showLog?userId="+user.userId)! as URL)
+        request.httpMethod = "GET"
+        
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            if error != nil {
+                print("http connect error")
+                return
+            }
+            if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+            
+                let resultString = String(describing: responseString)
+                
+                print(resultString)
+
+                var dicData : Dictionary<String, Any> = [String : Any]()
+                    do {
+                        // 딕셔너리에 데이터 저장 실시
+                        dicData = try JSONSerialization.jsonObject(with: Data(resultString.utf8), options: []) as! [String:Any]
+                        DispatchQueue.main.sync {
+                            let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            if let lpvc = storyBoard?.instantiateViewController(withIdentifier: "LogPage") as? LogPage {
+                                var logList = [Log]()
+
+                                if let data = dicData["Data"] as? [[String : Any]] {
+                                    for i in data {
+                                        let log = Log(code: i["code"] as! String, name: i["name"] as! String, userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, rentDate: i["rentDate"] as! String, returnDate: i["returnDate"] as! String)
+                                        logList.append(log)
+                                    }
+                                }
+                                lpvc.logList = logList
+                                lpvc.user = self.user
+                                self.navigationController?.pushViewController(lpvc, animated: true)
+                            }
+                        }
+                    } catch {
+                        DispatchQueue.main.async{
+                            print(error.localizedDescription)
+                            let alert = UIAlertController(title:"오류",message: "API서버 오류입니다. 잠시 후에 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
+                            //확인 버튼 만들기
+                            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                            alert.addAction(ok)
+                            self.present(alert,animated: true,completion: nil)
+                        }
+                    }
+            }
         }
+        task.resume()
+        
     }
     
     @IBAction func noticeBtn(_ sender: UIButton) {

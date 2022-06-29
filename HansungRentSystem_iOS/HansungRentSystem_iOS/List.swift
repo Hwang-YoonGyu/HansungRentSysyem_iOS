@@ -23,6 +23,16 @@ class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
     }
+    func changeStatus(obj : Object) -> Void {
+        for i in 0...objList.count {
+            if objList[i].code == obj.code {
+                objList[i] = obj
+                print(objList[i].userId)
+                tableView.reloadData()
+                break
+            }
+        }
+    }
 }
 extension List {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,6 +61,7 @@ extension List {
             let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
             if let dvc = storyboard?.instantiateViewController(identifier: "Detail") as? Detail {
                 dvc.user = self.user
+                dvc.lvc = self
                 dvc.obj = obj
                 self.navigationController?.pushViewController(dvc, animated: true)        
             } else {

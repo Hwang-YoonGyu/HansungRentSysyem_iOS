@@ -39,7 +39,7 @@ class Login: UIViewController {
                         DispatchQueue.main.sync {
                             let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
                             if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Main") as? Main {
-                                mvc.user = User(userId: dicData["id"]! as! String, password: dicData["password"]! as! String, userName: dicData["userName"]! as! String, isRented: dicData["isRented"]! as! String)
+                                mvc.user = User(userId: dicData["id"]! as! String, password: dicData["password"]! as! String, userName: dicData["userName"]! as! String, isRented: dicData["isRented"]! as! String, userPhone: dicData["userPhone"] as! String)
                                 self.navigationController?.pushViewController(mvc, animated: true)
                             }
                         }
