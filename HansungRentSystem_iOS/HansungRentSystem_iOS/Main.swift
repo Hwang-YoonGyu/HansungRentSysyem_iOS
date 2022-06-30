@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 class Main : UIViewController {
-    var user : User!
+    var user = User.instance
 
     
     @IBOutlet weak var userText: UILabel!
@@ -20,7 +20,7 @@ class Main : UIViewController {
     @IBAction func ListBtn(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Ask") as? Ask {
-            mvc.user = self.user
+            //mvc.user = self.user
             self.navigationController?.pushViewController(mvc, animated: true)
         }
     }
@@ -58,7 +58,7 @@ class Main : UIViewController {
                                     }
                                 }
                                 lpvc.logList = logList
-                                lpvc.user = self.user
+                                //lpvc.user = self.user
                                 self.navigationController?.pushViewController(lpvc, animated: true)
                             }
                         }

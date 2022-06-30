@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 class LogPage : UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var user : User!
+    //var user : User!
     var logList = [Log]()
 
     

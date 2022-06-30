@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 class Ask : UIViewController {
-    var user : User!
+    //var user : User!
     
     
     @IBAction func backBtn(_ sender: UIButton) {
@@ -61,17 +61,18 @@ class Ask : UIViewController {
                                     for i in data {
                                         let temp = i["status"] as! String
                                         if temp == "대여가능" {
-                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: "", returnDate: "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: true)
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: "", returnDate: "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: "대여", boolRent: true)
                                             objList.append(obj)
                                         }
                                         else {
-                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as? String ?? "", returnDate: i["returnDate"] as? String ?? "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: i["status"] as! String, boolRent: false)
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as? String ?? "", returnDate: i["returnDate"] as? String ?? "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: "불가", boolRent: false)
                                             objList.append(obj)
                                         }
+                                        
                                     }
                                 }
                                 lvc.objList = objList
-                                lvc.user = self.user
+                                //lvc.user = self.user
                                 self.navigationController?.pushViewController(lvc, animated: true)
                             }
                         }

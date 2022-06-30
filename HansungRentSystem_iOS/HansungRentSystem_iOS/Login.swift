@@ -23,6 +23,13 @@ class Login: UIViewController {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             if error != nil {
+                DispatchQueue.main.async{
+                    let alert = UIAlertController(title:"로그인 실패",message: "API서버 접속 오류입니다. 인터넷연결을 확인하거나, 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
+                    //확인 버튼 만들기
+                    let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                    alert.addAction(ok)
+                    self.present(alert,animated: true,completion: nil)
+                }
                 print("http connect error")
                 return
             }
@@ -39,14 +46,20 @@ class Login: UIViewController {
                         DispatchQueue.main.sync {
                             let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
                             if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Main") as? Main {
-                                mvc.user = User(userId: dicData["id"]! as! String, password: dicData["password"]! as! String, userName: dicData["userName"]! as! String, isRented: dicData["isRented"]! as! String, userPhone: dicData["userPhone"] as! String)
+//                                mvc.user = User(userId: dicData["id"]! as! String, password: dicData["password"]! as! String, userName: dicData["userName"]! as! String, isRented: dicData["isRented"]! as! String, userPhone: dicData["userPhone"] as! String)
+                                let user = User.instance
+                                user.userId = dicData["id"]! as! String
+                                user.userPhone = dicData["userPhone"]! as! String
+                                user.password = dicData["password"]! as! String
+                                user.userName = dicData["userName"]! as! String
+                                user.isRented = dicData["isRented"]! as! String
                                 self.navigationController?.pushViewController(mvc, animated: true)
                             }
                         }
                     } catch {
                         DispatchQueue.main.async{
                             print(error.localizedDescription)
-                            let alert = UIAlertController(title:"로그인 실패",message: "아이디와 비밀번호를 확인해주세요",preferredStyle: UIAlertController.Style.alert)
+                            let alert = UIAlertController(title:"로그인 실패",message: "아이디와 비밀번호를 확인해주세요.",preferredStyle: UIAlertController.Style.alert)
                             //확인 버튼 만들기
                             let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
                             alert.addAction(ok)
