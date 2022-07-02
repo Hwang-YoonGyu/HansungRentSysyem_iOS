@@ -29,6 +29,7 @@
 		9141762228636CE200BD5DF2 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762128636CE200BD5DF2 /* Detail.swift */; };
 		9141762428636CFD00BD5DF2 /* LogPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762328636CFD00BD5DF2 /* LogPage.swift */; };
 		9141762628636D1E00BD5DF2 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762528636D1E00BD5DF2 /* Notice.swift */; };
+		919E5865286ED0CC00E2E4E0 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E5864286ED0CC00E2E4E0 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9141762128636CE200BD5DF2 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		9141762328636CFD00BD5DF2 /* LogPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPage.swift; sourceTree = "<group>"; };
 		9141762528636D1E00BD5DF2 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		919E5864286ED0CC00E2E4E0 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				910E5DA92862FCFC004D3141 /* AppDelegate.swift */,
 				910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */,
+				919E5864286ED0CC00E2E4E0 /* Background.swift */,
 				910E5DAD2862FCFC004D3141 /* Login.swift */,
 				9141761B28636C5D00BD5DF2 /* Main.swift */,
 				9141761D28636C8E00BD5DF2 /* Ask.swift */,
@@ -99,6 +102,8 @@
 				9141762528636D1E00BD5DF2 /* Notice.swift */,
 				9139D74F28697D880032590A /* Object.swift */,
 				9139D751286981FC0032590A /* User.swift */,
+				9141594A286CAD480081F7E2 /* Log.swift */,
+				9141594C286CC0B10081F7E2 /* ExtendedDate.swift */,
 				910E5DAF2862FCFC004D3141 /* Main.storyboard */,
 				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DB42862FCFD004D3141 /* LaunchScreen.storyboard */,
@@ -109,8 +114,6 @@
 				910E5DC928633549004D3141 /* MSI.jpg */,
 				910E5DCA28633549004D3141 /* samsung.jpg */,
 				9141761928635EB700BD5DF2 /* hansung.jpg */,
-				9141594A286CAD480081F7E2 /* Log.swift */,
-				9141594C286CC0B10081F7E2 /* ExtendedDate.swift */,
 			);
 			path = HansungRentSystem_iOS;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9139D75028697D880032590A /* Object.swift in Sources */,
+				919E5865286ED0CC00E2E4E0 /* Background.swift in Sources */,
 				910E5DAE2862FCFC004D3141 /* Login.swift in Sources */,
 				9141594B286CAD480081F7E2 /* Log.swift in Sources */,
 				9141762228636CE200BD5DF2 /* Detail.swift in Sources */,
