@@ -12,9 +12,9 @@ class Background {
     static let instance = Background()
     
     let sharedApp = UIApplication.shared
-    
+    var task: UIBackgroundTaskIdentifier
     private init() {
-        var task = sharedApp.beginBackgroundTask(expirationHandler: {
+        task = sharedApp.beginBackgroundTask(expirationHandler: {
             var i : Int = 0
             while true {
                 print(i)
@@ -23,10 +23,7 @@ class Background {
                     break
                 }
                 sleep(1)
-                
             }
         })
     }
-
-    
 }

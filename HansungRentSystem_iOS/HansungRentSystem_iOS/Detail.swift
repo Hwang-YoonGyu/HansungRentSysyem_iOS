@@ -37,62 +37,63 @@ class Detail : UIViewController {
                 self.present(alert,animated: true,completion: nil)
             }
         }
-        
-        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/Rent?code="+obj.code+"&userId="+user.userId+"&userPhone="+user.userPhone+"&rentDate="+obj.rentDate+"&returnDate="+obj.returnDate)! as URL)
-        request.httpMethod = "GET"
-        
-        
-        let task = URLSession.shared.dataTask(with: request as URLRequest) {
-            data, response, error in
-            if error != nil {
-                print("http connect error")
-                return
-            }
-            if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+        else {
+            let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/Rent?code="+obj.code+"&userId="+user.userId+"&userPhone="+user.userPhone+"&rentDate="+obj.rentDate+"&returnDate="+obj.returnDate)! as URL)
+            request.httpMethod = "GET"
             
-                let resultString = String(describing: responseString)
-                print(resultString)
-                var dicData : Dictionary<String, Any> = [String : Any]()
-                do {
-                    dicData = try JSONSerialization.jsonObject(with: Data(resultString.utf8), options: []) as! [String:Any]
-                    if dicData["result"] as! String == "1" {
+            
+            let task = URLSession.shared.dataTask(with: request as URLRequest) {
+                data, response, error in
+                if error != nil {
+                    print("http connect error")
+                    return
+                }
+                if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+                
+                    let resultString = String(describing: responseString)
+                    print(resultString)
+                    var dicData : Dictionary<String, Any> = [String : Any]()
+                    do {
+                        dicData = try JSONSerialization.jsonObject(with: Data(resultString.utf8), options: []) as! [String:Any]
+                        if dicData["result"] as! String == "1" {
+                            DispatchQueue.main.sync{
+                                let alert = UIAlertController(title:"신청 완료",message: "승인이 완료되면 과사무실에 방문하여 기자재를 수령해주세요.",preferredStyle: UIAlertController.Style.alert)
+                                                        //확인 버튼 만들기
+                                let ok = UIAlertAction(title: "확인", style: .default, handler: {_ in
+                                    self.lvc.changeStatus(obj: self.obj)
+                                    self.user.isRented = "1"
+                                    self.navigationController?.popViewController(animated: true)
+                                })
+                                alert.addAction(ok)
+                                self.present(alert,animated: true,completion: nil)
+                            }
+                        }
+                        else if dicData["result"] as! String == "0" {
+                            DispatchQueue.main.sync{
+                                let alert = UIAlertController(title:"신청 실패",message: "이미 대여되거나 신청된 기자재입니다.",preferredStyle: UIAlertController.Style.alert)
+                                                        //확인 버튼 만들기
+                                let ok = UIAlertAction(title: "확인", style: .default, handler: {_ in
+                                    self.lvc.changeStatus(obj: self.obj)
+                                    self.navigationController?.popViewController(animated: true)
+                                })
+                                alert.addAction(ok)
+                                self.present(alert,animated: true,completion: nil)
+                            }
+                        }
+                    } catch {
                         DispatchQueue.main.sync{
-                            let alert = UIAlertController(title:"신청 완료",message: "승인이 완료되면 과사무실에 방문하여 기자재를 수령해주세요.",preferredStyle: UIAlertController.Style.alert)
-                                                    //확인 버튼 만들기
-                            let ok = UIAlertAction(title: "확인", style: .default, handler: {_ in
-                                self.lvc.changeStatus(obj: self.obj)
-                                self.user.isRented = "1"
-                                self.navigationController?.popViewController(animated: true)
-                            })
+                            print(error.localizedDescription)
+                            let alert = UIAlertController(title:"오류",message: "API서버 오류입니다. 잠시 후에 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
+                                //확인 버튼 만들기
+                            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
                             alert.addAction(ok)
                             self.present(alert,animated: true,completion: nil)
                         }
-                    }
-                    else if dicData["result"] as! String == "0" {
-                        DispatchQueue.main.sync{
-                            let alert = UIAlertController(title:"신청 실패",message: "이미 대여되거나 신청된 기자재입니다.",preferredStyle: UIAlertController.Style.alert)
-                                                    //확인 버튼 만들기
-                            let ok = UIAlertAction(title: "확인", style: .default, handler: {_ in
-                                self.lvc.changeStatus(obj: self.obj)
-                                self.navigationController?.popViewController(animated: true)
-                            })
-                            alert.addAction(ok)
-                            self.present(alert,animated: true,completion: nil)
-                        }
-                    }
-                } catch {
-                    DispatchQueue.main.sync{
-                        print(error.localizedDescription)
-                        let alert = UIAlertController(title:"오류",message: "API서버 오류입니다. 잠시 후에 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
-                            //확인 버튼 만들기
-                        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                        alert.addAction(ok)
-                        self.present(alert,animated: true,completion: nil)
                     }
                 }
             }
+            task.resume()
         }
-        task.resume()
         
     }
     override func viewDidLoad() {
