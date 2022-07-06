@@ -12,11 +12,18 @@ class Login: UIViewController {
 
     @IBOutlet weak var pwdField: UITextField!
     @IBOutlet weak var idField: UITextField!
+    @IBOutlet weak var autoLoginSwitch: UISwitch!
+    
+    let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
 
     @IBAction func loginBtn(_ sender: UIButton) {
+        doLogin(id: idField.text!, pwd: pwdField.text!)
         
-        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/login?userId="+idField.text!+"&password="+pwdField.text!)! as URL)
+
+    }
+    func doLogin(id : String, pwd : String) {
+        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/login?userId="+id+"&password="+pwd)! as URL)
         request.httpMethod = "GET"
         
         
@@ -33,6 +40,9 @@ class Login: UIViewController {
                 print("http connect error")
                 return
             }
+
+            
+            
             if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
             
                 let resultString = String(describing: responseString)
@@ -53,6 +63,23 @@ class Login: UIViewController {
                                 user.password = dicData["password"]! as! String
                                 user.userName = dicData["userName"]! as! String
                                 user.isRented = dicData["isRented"]! as! String
+                                if(self.autoLoginSwitch.isOn == true){
+                                    let fileURL = self.documentDirectory.appendingPathComponent("info.txt")
+                                    
+                                
+                                    var text:String = ""
+                                    text.append(contentsOf: id)
+                                    text.append(contentsOf: " ")
+                                    text.append(contentsOf: pwd)
+                                
+                                    do {
+                                    //파일 생성하여 text내용을 fileURL에 저장
+                                        try text.write(to: fileURL, atomically: true, encoding: .utf8)
+                                    } catch let e {
+                                    //오류 처리
+                                        print(e.localizedDescription)
+                                    }
+                                }
                                 self.navigationController?.pushViewController(mvc, animated: true)
                             }
                         }
@@ -70,12 +97,29 @@ class Login: UIViewController {
         }
         task.resume()
         
-
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let fileURL = documentDirectory.appendingPathComponent("info.txt")
+        do{
+        let textContent = try String(contentsOf: fileURL, encoding: .utf8)
+            print(textContent)
+           
+            if(textContent != ""){
+               let temp = textContent.split(separator: " ")
+                doLogin(id: String(temp[0]), pwd: String(temp[1]))
+            }
+
+            else{
+                print("file not exist")
+            }
+        }
+        catch let e {
+            // 5-2. 에러처리
+            print(e.localizedDescription)
+        }
+        
     }
 
 
