@@ -120,9 +120,18 @@ class Login: UIViewController {
             print(e.localizedDescription)
         }
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
 
 
 }
 
-
+                                         
+extension Login{
+    @objc func dismissKeyboard(sender: UIGestureRecognizer){
+        idField.resignFirstResponder()
+        pwdField.resignFirstResponder()
+    }
+}
+                                         
