@@ -32,7 +32,7 @@ class Ask : UIViewController {
 
     }
     func callShowAPI(brand: String) {
-        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/show?brand="+brand)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/show?brand="+brand)! as URL)
         print(request)
         request.httpMethod = "GET"
         

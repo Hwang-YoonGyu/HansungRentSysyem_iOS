@@ -26,7 +26,7 @@ class Main : UIViewController {
     }
     
     @IBAction func LogBtn(_ sender: UIButton) {
-        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/showLog?userId="+user.userId)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/showLog?userId="+user.userId)! as URL)
         request.httpMethod = "GET"
         
         
@@ -79,11 +79,74 @@ class Main : UIViewController {
     }
     
     @IBAction func noticeBtn(_ sender: UIButton) {
-        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
-            nvc.user = self.user
-            self.navigationController?.pushViewController(nvc, animated: true)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/noti?userId="+user.userId)! as URL)
+        request.httpMethod = "GET"
+
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            if error != nil {
+                print("http connect error")
+                return
+            }
+            if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+
+                let resultString = String(describing: responseString)
+
+                print(resultString)
+
+                var dicData : Dictionary<String, Any> = [String : Any]()
+                    do {
+                        // 딕셔너리에 데이터 저장 실시
+                        dicData = try JSONSerialization.jsonObject(with: Data(resultString.utf8), options: []) as! [String:Any]
+                        DispatchQueue.main.sync {
+                            let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
+                                var notiList = [Noti]()
+
+                                if let data = dicData["Data"] as? [[String : Any]] {
+                                    for i in data {
+                                        let noti = Noti(userId: i["userId"] as! String, Date: i["date"] as! String, Detail: i["detail"] as! String)
+                                        notiList.append(noti)
+                                    }
+                                }
+                                let noti = Noti(userId: "123", Date: "2022-07-07", Detail: "유지연 바보")
+                                let noti2 = Noti(userId: "123", Date: "2022-07-08", Detail: "유지연 멍청이")
+                                notiList.append(noti)
+                                notiList.append(noti2)
+
+                                nvc.notiList = notiList
+                                //lpvc.user = self.user
+                                self.navigationController?.pushViewController(nvc, animated: true)
+                            }
+                        }
+                    } catch {
+                        DispatchQueue.main.async{
+                            print(error.localizedDescription)
+                            let alert = UIAlertController(title:"오류",message: "API서버 오류입니다. 잠시 후에 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
+                            //확인 버튼 만들기
+                            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                            alert.addAction(ok)
+                            self.present(alert,animated: true,completion: nil)
+                        }
+                    }
+            }
         }
+        task.resume()
+//        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+//            if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
+//                var notiList = [Noti]()
+//
+//                let noti = Noti(userId: "123", Date: "2022-07-07", Detail: "유지연 바보")
+//                    let noti2 = Noti(userId: "123", Date: "2022-07-08", Detail: "유지연 멍청이")
+//                        notiList.append(noti)
+//                        notiList.append(noti2)
+//
+//                        nvc.notiList = notiList
+//                //lpvc.user = self.user
+//                self.navigationController?.pushViewController(nvc, animated: true)
+//            }
+    
     }
     
     

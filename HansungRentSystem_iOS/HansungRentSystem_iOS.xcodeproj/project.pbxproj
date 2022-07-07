@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90D0E3AC2876C78D008D7FEC /* Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0E3AB2876C78D008D7FEC /* Noti.swift */; };
 		910E5DAA2862FCFC004D3141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DA92862FCFC004D3141 /* AppDelegate.swift */; };
 		910E5DAC2862FCFC004D3141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */; };
 		910E5DAE2862FCFC004D3141 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DAD2862FCFC004D3141 /* Login.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90D0E3AB2876C78D008D7FEC /* Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti.swift; sourceTree = "<group>"; };
 		910E5DA62862FCFC004D3141 /* HansungRentSystem_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HansungRentSystem_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		910E5DA92862FCFC004D3141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,10 +105,11 @@
 				9139D74F28697D880032590A /* Object.swift */,
 				9139D751286981FC0032590A /* User.swift */,
 				9141594A286CAD480081F7E2 /* Log.swift */,
+				90D0E3AB2876C78D008D7FEC /* Noti.swift */,
 				9141594C286CC0B10081F7E2 /* ExtendedDate.swift */,
 				910E5DAF2862FCFC004D3141 /* Main.storyboard */,
-				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DB42862FCFD004D3141 /* LaunchScreen.storyboard */,
+				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DB72862FCFD004D3141 /* Info.plist */,
 				910E5DBD28630083004D3141 /* img.jpg */,
 				910E5DC728633549004D3141 /* apple.jpg */,
@@ -200,6 +203,7 @@
 				910E5DAE2862FCFC004D3141 /* Login.swift in Sources */,
 				9141594B286CAD480081F7E2 /* Log.swift in Sources */,
 				9141762228636CE200BD5DF2 /* Detail.swift in Sources */,
+				90D0E3AC2876C78D008D7FEC /* Noti.swift in Sources */,
 				9141762428636CFD00BD5DF2 /* LogPage.swift in Sources */,
 				9141762628636D1E00BD5DF2 /* Notice.swift in Sources */,
 				9141594D286CC0B10081F7E2 /* ExtendedDate.swift in Sources */,
