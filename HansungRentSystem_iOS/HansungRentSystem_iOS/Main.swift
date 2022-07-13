@@ -27,6 +27,9 @@ class Main : UIViewController {
             }
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        notiMark()
+    }
     
     @IBAction func ListBtn(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -159,4 +162,36 @@ class Main : UIViewController {
     @IBAction func LogoutBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+
+    func notiMark() {
+        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/noti?userId="+user.userId)! as URL)
+        request.httpMethod = "GET"
+
+
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            if error != nil {
+                print("http connect error")
+                return
+            }
+            if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+
+                let resultString = String(describing: responseString)
+                let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                let fileURL = documentDirectory.appendingPathComponent("noti.txt")
+                do {
+                //파일 생성하여 text내용을 fileURL에 저장
+                    try resultString.write(to: fileURL, atomically: true, encoding: .utf8)
+                } catch let e {
+                //오류 처리
+                    print(e.localizedDescription)
+                }
+                
+                
+                
+            }
+        }
+        task.resume()
+    }
 }
+
