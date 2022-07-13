@@ -11,19 +11,19 @@ import UIKit
 class Background {
     static let instance = Background()
     
-    let sharedApp = UIApplication.shared
-    var task: UIBackgroundTaskIdentifier
+//    let sharedApp = UIApplication.shared
+//    var task: UIBackgroundTaskIdentifier
     private init() {
-        task = sharedApp.beginBackgroundTask(expirationHandler: {
-            var i : Int = 0
-            while true {
-                print(i)
-                i+=1
-                if i == 100 {
-                    break
-                }
-                sleep(1)
-            }
-        })
+//        task = sharedApp.beginBackgroundTask(expirationHandler: {
+//            var i : Int = 0
+//            while true {
+//                print(i)
+//                i+=1
+//                if i == 100 {
+//                    break
+//                }
+//                sleep(1)
+//            }
+//        })
     }
 }

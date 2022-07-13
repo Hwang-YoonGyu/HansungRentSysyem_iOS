@@ -15,6 +15,17 @@ class Main : UIViewController {
     
     override func viewDidLoad() {
         userText.text = user.userId + " " + user.userName
+        DispatchQueue.global().async {
+            var i : Int = 0
+            while true {
+                print(i)
+                i+=1
+                if i == 100 {
+                    break
+                }
+                sleep(1)
+            }
+        }
     }
     
     @IBAction func ListBtn(_ sender: UIButton) {
@@ -110,11 +121,6 @@ class Main : UIViewController {
                                         notiList.append(noti)
                                     }
                                 }
-                                let noti = Noti(userId: "123", Date: "2022-07-07", Detail: "유지연 바보")
-                                let noti2 = Noti(userId: "123", Date: "2022-07-08", Detail: "유지연 멍청이")
-                                notiList.append(noti)
-                                notiList.append(noti2)
-
                                 nvc.notiList = notiList
                                 //lpvc.user = self.user
                                 self.navigationController?.pushViewController(nvc, animated: true)
