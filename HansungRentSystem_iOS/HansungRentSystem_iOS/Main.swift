@@ -9,25 +9,43 @@ import Foundation
 import UIKit
 class Main : UIViewController {
     var user = User.instance
-
+    let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    
     
     @IBOutlet weak var userText: UILabel!
     
     override func viewDidLoad() {
         userText.text = user.userId + " " + user.userName
-        DispatchQueue.global().async {
-            var i : Int = 0
-            while true {
-                print(i)
-                i+=1
-                if i == 100 {
-                    break
-                }
-                sleep(1)
-            }
-        }
+//        DispatchQueue.global().async {
+//            var i : Int = 0
+//            while true {
+//                print(i)
+//                i+=1
+//                if i == 100 {
+//                    break
+//                }
+//                sleep(1)
+//            }
+//        }
     }
     override func viewWillAppear(_ animated: Bool) {
+        let fileURL = documentDirectory.appendingPathComponent("noti.txt")
+        do{
+        let textContent = try String(contentsOf: fileURL, encoding: .utf8)
+            print(textContent)
+           
+            if(textContent != ""){
+
+            }
+
+            else{
+                print("file not exist")
+            }
+        }
+        catch let e {
+            // 5-2. 에러처리
+            print(e.localizedDescription)
+        }
         notiMark()
     }
     
