@@ -23,7 +23,7 @@ class Login: UIViewController {
 
     }
     func doLogin(id : String, pwd : String) {
-        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/login?userId="+id+"&password="+pwd)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/login?userId="+id+"&password="+pwd)! as URL)
         request.httpMethod = "GET"
         
         

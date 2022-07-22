@@ -33,7 +33,7 @@ class Main : UIViewController {
     }
     
     @IBAction func LogBtn(_ sender: UIButton) {
-        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/showLog?userId="+user.userId)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/showLog?userId="+user.userId)! as URL)
         request.httpMethod = "GET"
         
         
@@ -131,7 +131,7 @@ class Main : UIViewController {
             print(e.localizedDescription)
         }
         
-        let request = NSMutableURLRequest(url: NSURL(string: "http://223.194.158.173:8080/API/noti?userId="+user.userId)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/noti?userId="+user.userId)! as URL)
         request.httpMethod = "GET"
 
 
