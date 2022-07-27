@@ -10,8 +10,7 @@ import UIKit
 class Main : UIViewController {
     var user = User.instance
     let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-    var notiListForServer = [Noti]() //서버에서 가져오는거
-    var notiListForFile = [Noti]() //파일에서 가져오는거
+    var notiList = [Noti]() //서버에서 가져오는거
 
     
     @IBOutlet weak var userText: UILabel!
@@ -21,7 +20,6 @@ class Main : UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         
-        notiMark()
     }
     
     @IBAction func ListBtn(_ sender: UIButton) {
@@ -86,51 +84,6 @@ class Main : UIViewController {
     }
     
     @IBAction func noticeBtn(_ sender: UIButton) {
-    
-        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
-
-            nvc.notiList = self.notiListForServer
-            //lpvc.user = self.user
-            self.navigationController?.pushViewController(nvc, animated: true)
-        }
-    }
-    
-    
-    @IBAction func LogoutBtn(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-
-    func notiMark() {
-        let fileURL = documentDirectory.appendingPathComponent("noti.txt") //파일입출력에서 알람리스트 뽑음
-        do{
-        let textContent = try String(contentsOf: fileURL, encoding: .utf8)
-            print(textContent)
-           
-            if(textContent != ""){
-                self.notiListForFile.removeAll()
-                var dicData : Dictionary<String, Any> = [String : Any]()
-                do {
-                    // 딕셔너리에 데이터 저장 실시
-                    dicData = try JSONSerialization.jsonObject(with: Data(textContent.utf8), options: []) as! [String:Any]
-
-                    if let data = dicData["Data"] as? [[String : Any]] {
-                        for i in data {
-                            let noti = Noti(userId: i["userId"] as! String, Date: i["date"] as! String, Detail: i["detail"] as! String)
-                            notiListForFile.append(noti)
-                        }
-                    }
-                }
-            }
-            else{
-                print("file not exist")
-            }
-        }
-        catch let e {
-            // 5-2. 에러처리
-            print(e.localizedDescription)
-        }
-        
         let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/noti?userId="+user.userId)! as URL)
         request.httpMethod = "GET"
 
@@ -144,35 +97,26 @@ class Main : UIViewController {
             if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
 
                 let resultString = String(describing: responseString)
-                let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                let fileURL = documentDirectory.appendingPathComponent("noti.txt")
-                do {
-                //파일 생성하여 text내용을 fileURL에 저장
-                    try resultString.write(to: fileURL, atomically: true, encoding: .utf8)
-                } catch let e {
-                //오류 처리
-                    print(e.localizedDescription)
-                }
-                
+
                 var dicData : Dictionary<String, Any> = [String : Any]()
                 do {
                     // 딕셔너리에 데이터 저장 실시
                     dicData = try JSONSerialization.jsonObject(with: Data(resultString.utf8), options: []) as! [String:Any]
                     DispatchQueue.main.sync {
-                        self.notiListForServer.removeAll() //서버에 저장
+                        self.notiList.removeAll() //서버에 저장
                         if let data = dicData["Data"] as? [[String : Any]] {
                             for i in data {
                                 let noti = Noti(userId: i["userId"] as! String, Date: i["date"] as! String, Detail: i["detail"] as! String)
-                                self.notiListForServer.append(noti)
+                                self.notiList.append(noti)
                             }
                         }
-                        if self.notiListForFile.count != self.notiListForServer.count {
-                            print("알림티비")
+                        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+                        if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
+
+                            nvc.notiList = self.notiList
+                            //lpvc.user = self.user
+                            self.navigationController?.pushViewController(nvc, animated: true)
                         }
-                        else {
-                            print("다른게없다티비")
-                        }
-                        
                     }
                 } catch {
                     DispatchQueue.main.async{
@@ -187,6 +131,9 @@ class Main : UIViewController {
             }
         }
         task.resume()
+    }
+    @IBAction func LogoutBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
