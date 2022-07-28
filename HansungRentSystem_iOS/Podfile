@@ -6,7 +6,6 @@ target 'HansungRentSystem_iOS' do
   use_frameworks!
 
   # Pods for HansungRentSystem_iOS
-  pod 'Snapkit'
-  pod 'Firebase/Core'
+  pod "ViewAnimator"
 
 end

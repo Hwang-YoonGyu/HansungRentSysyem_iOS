@@ -19,16 +19,24 @@ class Main : UIViewController {
         userText.text = user.userId + " " + user.userName
     }
     override func viewWillAppear(_ animated: Bool) {
-        
-    }
+              }
     
     @IBAction func ListBtn(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+        // animation
+       
+        
         if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Ask") as? Ask {
             //mvc.user = self.user
-            self.navigationController?.pushViewController(mvc, animated: true)
+            UIView.animate(withDuration:0.5, animations: {
+                UIView.setAnimationCurve(.easeInOut)
+                self.navigationController?.pushViewController(mvc, animated: false)
+                UIView.setAnimationTransition(UIView.AnimationTransition.none, for:(self.navigationController?.view)!, cache: false)
+            })
+         //self.navigationController?.pushViewController(mvc, animated: true)
         }
     }
+    
     
     @IBAction func LogBtn(_ sender: UIButton) {
         let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/showLog?userId="+user.userId)! as URL)

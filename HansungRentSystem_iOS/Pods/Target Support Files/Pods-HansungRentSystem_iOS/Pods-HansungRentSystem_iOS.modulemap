@@ -1,0 +1,6 @@
+framework module Pods_HansungRentSystem_iOS {
+  umbrella header "Pods-HansungRentSystem_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import ViewAnimator
 import UIKit
 class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     
     //var user : User!
     var objList = [Object]()
@@ -19,9 +21,15 @@ class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let animation = AnimationType.from(direction: .top, offset:300)
+        UIView.animate(views: tableView.visibleCells, animations: [animation])
+    }
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
+        
     }
     func changeStatus(obj : Object) -> Void {
         for i in 0...objList.count {
@@ -33,8 +41,10 @@ class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
+    
 }
 extension List {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objList.count
     }
