@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ViewAnimator
+//import ViewAnimator
 import UIKit
 class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -21,11 +21,6 @@ class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let animation = AnimationType.from(direction: .top, offset:300)
-        UIView.animate(views: tableView.visibleCells, animations: [animation])
-    }
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -80,6 +75,13 @@ extension List {
         }
         return cell!
     }
+    func tableView(_ tableView: UITableView, willDisplay cell : UITableViewCell, forRowAt indexPath : IndexPath){
+            cell.transform = CGAffineTransform(scaleX: 0, y: 0)
+            
+            UIView.animate(withDuration : 0.5, delay : 0.05 * Double(indexPath.row), animations: {
+                cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        }
 }
 extension UIControl {
     func addAction(for controlEvents: UIControl.Event = .touchUpInside, _ closure: @escaping()->()) {

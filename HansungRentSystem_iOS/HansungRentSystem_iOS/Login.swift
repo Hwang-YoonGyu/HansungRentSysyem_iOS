@@ -80,6 +80,7 @@ class Login: UIViewController {
                                         print(e.localizedDescription)
                                     }
                                 }
+                                //self.navigationController?.modalTransitionStyle = .crossDissolve
                                 self.navigationController?.pushViewController(mvc, animated: true)
                             }
                         }
