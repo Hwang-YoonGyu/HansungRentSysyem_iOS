@@ -23,17 +23,9 @@ class Main : UIViewController {
     
     @IBAction func ListBtn(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-        // animation
-       
-        
         if let mvc = storyBoard?.instantiateViewController(withIdentifier: "Ask") as? Ask {
             //mvc.user = self.user
-            UIView.animate(withDuration:0.5, animations: {
-                UIView.setAnimationCurve(.easeInOut)
-                self.navigationController?.pushViewController(mvc, animated: false)
-                UIView.setAnimationTransition(UIView.AnimationTransition.none, for:(self.navigationController?.view)!, cache: false)
-            })
-         //self.navigationController?.pushViewController(mvc, animated: true)
+         self.navigationController?.pushViewController(mvc, animated: true)
         }
     }
     
