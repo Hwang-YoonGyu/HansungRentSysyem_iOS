@@ -143,10 +143,7 @@
                                     <constraint firstAttribute="height" constant="200" id="gRz-jh-JVZ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="로그아웃"/>
-                                <connections>
-                                    <action selector="LogoutBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="wpS-Ag-B8u"/>
-                                </connections>
+                                <buttonConfiguration key="configuration" style="filled" title="기자재 정보"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-Wt-GDR">
                                 <rect key="frame" x="7" y="498" width="200" height="200"/>
@@ -173,52 +170,38 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hansung.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hH0-HO-Y19">
-                                <rect key="frame" x="234" y="54" width="180" height="40"/>
+                                <rect key="frame" x="82" y="144" width="250" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="eCu-bP-Gd8"/>
-                                    <constraint firstAttribute="height" constant="40" id="oWw-Xi-0Wr"/>
+                                    <constraint firstAttribute="width" constant="250" id="kpG-ik-NCo"/>
+                                    <constraint firstAttribute="height" constant="75" id="rPo-3O-Jjc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="없음" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-BH-7kk">
-                                <rect key="frame" x="40" y="228" width="334" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6F5-Vy-eM3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 대여중인 기자재" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sz-KW-fJ1">
-                                <rect key="frame" x="40" y="188" width="334" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Dvx-Xp-1BO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX5-yz-tfn">
+                                <rect key="frame" x="321" y="64" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그아웃"/>
+                                <connections>
+                                    <action selector="LogoutBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="wf4-fx-81H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eBP-UA-qEC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Scy-BH-7kk" firstAttribute="leading" secondItem="eBP-UA-qEC" secondAttribute="leading" constant="40" id="1Gd-8P-hHy"/>
                             <constraint firstItem="fqp-va-rWA" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="100" id="1gB-s8-SzG"/>
-                            <constraint firstItem="fqp-va-rWA" firstAttribute="top" secondItem="Scy-BH-7kk" secondAttribute="bottom" constant="40" id="4K9-vv-0Ls"/>
                             <constraint firstItem="YK6-Wt-GDR" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="-100" id="5IJ-7j-8dx"/>
                             <constraint firstItem="70G-bB-1QF" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="-100" id="8Ge-jz-8W8"/>
                             <constraint firstItem="9kj-WA-AIu" firstAttribute="top" secondItem="eBP-UA-qEC" secondAttribute="top" constant="20" id="BCg-Qm-O0u"/>
                             <constraint firstItem="vmr-D3-uF7" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" constant="100" id="D5X-zS-dPD"/>
-                            <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="Scy-BH-7kk" secondAttribute="trailing" constant="40" id="Gp3-Sx-rul"/>
                             <constraint firstItem="fqp-va-rWA" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="-50" id="H9F-Ba-k8v"/>
+                            <constraint firstItem="rX5-yz-tfn" firstAttribute="top" secondItem="eBP-UA-qEC" secondAttribute="top" constant="20" id="HPN-ob-VET"/>
                             <constraint firstItem="vmr-D3-uF7" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="150" id="Jyp-fk-G4Z"/>
-                            <constraint firstItem="Scy-BH-7kk" firstAttribute="top" secondItem="5sz-KW-fJ1" secondAttribute="bottom" constant="10" id="P8C-oK-Prj"/>
-                            <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="hH0-HO-Y19" secondAttribute="trailing" id="Syu-lH-phi"/>
+                            <constraint firstItem="hH0-HO-Y19" firstAttribute="top" secondItem="9kj-WA-AIu" secondAttribute="bottom" constant="50" id="SE8-gB-7vO"/>
                             <constraint firstItem="YK6-Wt-GDR" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="150" id="TsM-e8-l01"/>
-                            <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="5sz-KW-fJ1" secondAttribute="trailing" constant="40" id="d9a-1j-Jv8"/>
+                            <constraint firstItem="eBP-UA-qEC" firstAttribute="trailing" secondItem="rX5-yz-tfn" secondAttribute="trailing" constant="20" id="Yab-rk-AQc"/>
+                            <constraint firstItem="hH0-HO-Y19" firstAttribute="centerX" secondItem="O4z-w7-d7E" secondAttribute="centerX" id="f1h-50-3b8"/>
                             <constraint firstItem="70G-bB-1QF" firstAttribute="centerY" secondItem="O4z-w7-d7E" secondAttribute="centerY" constant="-50" id="n7V-7F-mdS"/>
                             <constraint firstItem="9kj-WA-AIu" firstAttribute="leading" secondItem="eBP-UA-qEC" secondAttribute="leading" constant="20" id="ngU-VZ-d0y"/>
-                            <constraint firstItem="hH0-HO-Y19" firstAttribute="top" secondItem="eBP-UA-qEC" secondAttribute="top" constant="10" id="oXF-oo-HXY"/>
-                            <constraint firstItem="5sz-KW-fJ1" firstAttribute="leading" secondItem="eBP-UA-qEC" secondAttribute="leading" constant="40" id="qIc-fm-U0d"/>
                         </constraints>
                     </view>
                     <connections>
@@ -227,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15u-hT-iot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="123"/>
+            <point key="canvasLocation" x="886.95652173913049" y="122.54464285714285"/>
         </scene>
         <!--Notice-->
         <scene sceneID="1VY-gj-Ot4">
@@ -701,7 +684,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p70-Wo-lXO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-716" y="123"/>
+            <point key="canvasLocation" x="-720" y="123"/>
         </scene>
         <!--LogPage-->
         <scene sceneID="YOW-LP-xZq">
