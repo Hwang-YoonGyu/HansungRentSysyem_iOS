@@ -32,6 +32,11 @@
 		9141762428636CFD00BD5DF2 /* LogPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762328636CFD00BD5DF2 /* LogPage.swift */; };
 		9141762628636D1E00BD5DF2 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762528636D1E00BD5DF2 /* Notice.swift */; };
 		919E5865286ED0CC00E2E4E0 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E5864286ED0CC00E2E4E0 /* Background.swift */; };
+		B84DDF8428A3D0EE00482AED /* MSI_sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF7F28A3D0EE00482AED /* MSI_sword.jpg */; };
+		B84DDF8528A3D0EE00482AED /* macbookair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8028A3D0EE00482AED /* macbookair.jpg */; };
+		B84DDF8628A3D0EE00482AED /* LG_gram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8128A3D0EE00482AED /* LG_gram.jpg */; };
+		B84DDF8728A3D0EE00482AED /* odyssey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8228A3D0EE00482AED /* odyssey.jpg */; };
+		B84DDF8828A3D0EE00482AED /* macbookpro.png in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8328A3D0EE00482AED /* macbookpro.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		9141762328636CFD00BD5DF2 /* LogPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPage.swift; sourceTree = "<group>"; };
 		9141762528636D1E00BD5DF2 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		919E5864286ED0CC00E2E4E0 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		B84DDF7F28A3D0EE00482AED /* MSI_sword.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MSI_sword.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/MSI_sword.jpg; sourceTree = "<group>"; };
+		B84DDF8028A3D0EE00482AED /* macbookair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = macbookair.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/macbookair.jpg; sourceTree = "<group>"; };
+		B84DDF8128A3D0EE00482AED /* LG_gram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LG_gram.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/LG_gram.jpg; sourceTree = "<group>"; };
+		B84DDF8228A3D0EE00482AED /* odyssey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = odyssey.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/odyssey.jpg; sourceTree = "<group>"; };
+		B84DDF8328A3D0EE00482AED /* macbookpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = macbookpro.png; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/macbookpro.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 		910E5DA82862FCFC004D3141 /* HansungRentSystem_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B84DDF8128A3D0EE00482AED /* LG_gram.jpg */,
+				B84DDF8028A3D0EE00482AED /* macbookair.jpg */,
+				B84DDF8328A3D0EE00482AED /* macbookpro.png */,
+				B84DDF7F28A3D0EE00482AED /* MSI_sword.jpg */,
+				B84DDF8228A3D0EE00482AED /* odyssey.jpg */,
 				910E5DA92862FCFC004D3141 /* AppDelegate.swift */,
 				910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */,
 				919E5864286ED0CC00E2E4E0 /* Background.swift */,
@@ -134,7 +149,6 @@
 				7AC20707C47E7A59E95FD066 /* Pods-HansungRentSystem_iOS.debug.xcconfig */,
 				0798BF50D79B28A7D0AF7E2C /* Pods-HansungRentSystem_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,12 +220,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84DDF8828A3D0EE00482AED /* macbookpro.png in Resources */,
+				B84DDF8728A3D0EE00482AED /* odyssey.jpg in Resources */,
 				910E5DCE2863354A004D3141 /* samsung.jpg in Resources */,
 				910E5DCC2863354A004D3141 /* Lg.jpg in Resources */,
 				9141761A28635EB700BD5DF2 /* hansung.jpg in Resources */,
+				B84DDF8628A3D0EE00482AED /* LG_gram.jpg in Resources */,
+				B84DDF8428A3D0EE00482AED /* MSI_sword.jpg in Resources */,
 				910E5DB62862FCFD004D3141 /* LaunchScreen.storyboard in Resources */,
 				910E5DB32862FCFD004D3141 /* Assets.xcassets in Resources */,
 				910E5DCD2863354A004D3141 /* MSI.jpg in Resources */,
+				B84DDF8528A3D0EE00482AED /* macbookair.jpg in Resources */,
 				910E5DB12862FCFC004D3141 /* Main.storyboard in Resources */,
 				910E5DBE28630083004D3141 /* img.jpg in Resources */,
 				910E5DCB2863354A004D3141 /* apple.jpg in Resources */,

@@ -10,6 +10,7 @@ import ViewAnimator
 import UIKit
 class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //    var singleton: Bool = true
     //var user : User!
     var objList = [Object]()
     
@@ -19,11 +20,11 @@ class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
         navigationController?.popViewController(animated: true)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        let animation = AnimationType.from(direction: .top, offset:300)
-//        UIView.animate(views: tableView.visibleCells, animations: [animation])
-//    }
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        super.viewDidAppear(animated)
+    //        let animation = AnimationType.from(direction: .top, offset:300)
+    //        UIView.animate(views: tableView.visibleCells, animations: [animation])
+    //    }
     
     
     override func viewDidLoad() {
@@ -57,14 +58,14 @@ extension List {
         let button = cell?.contentView.subviews[2] as! UIButton
         button.isEnabled = obj.boolRent
         button.setTitle(obj.status, for: .normal)
-
+        
         
         button.enumerateEventHandlers { action, targetAction, event, stop in
             if let action = action {
                 // This is a UIAction
                 button.removeAction(action, for: event)
             }
-
+            
         }
         button.addAction { //Action을 유동적으로 달음
             let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -72,7 +73,7 @@ extension List {
                 //dvc.user = self.user
                 dvc.lvc = self
                 dvc.obj = obj
-                self.navigationController?.pushViewController(dvc, animated: true)        
+                self.navigationController?.pushViewController(dvc, animated: true)
             } else {
                 return
             }
@@ -80,12 +81,32 @@ extension List {
         return cell!
     }
     func tableView(_ tableView: UITableView, willDisplay cell : UITableViewCell, forRowAt indexPath : IndexPath){
+        
+        if(objList[indexPath.row].boolAni){
             cell.transform = CGAffineTransform(scaleX: 0, y: 0)
-
             UIView.animate(withDuration : 0.5, delay : 0.05 * Double(indexPath.row), animations: {
                 cell.transform = CGAffineTransform(scaleX: 1, y: 1)
             })
+            objList[indexPath.row].boolAni = false
         }
+        else{
+            
+        }
+        
+    }
+    //    func tableView(_ tableView: UITableView, willDisplay cell : UITableViewCell, forRowAt indexPath : IndexPath){
+    //        if (singleton == true){
+    //            if(indexPath.row < 13){
+    //                cell.transform = CGAffineTransform(scaleX: 0, y: 0)
+    //                UIView.animate(withDuration : 0.5, delay : 0.05 * Double(indexPath.row), animations: {
+    //                    cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+    //                })
+    //            }
+    //            else{
+    //                singleton = false
+    //            }
+    //        }
+    //    }
 }
 extension UIControl {
     func addAction(for controlEvents: UIControl.Event = .touchUpInside, _ closure: @escaping()->()) {

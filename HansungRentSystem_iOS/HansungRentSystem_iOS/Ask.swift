@@ -61,11 +61,11 @@ class Ask : UIViewController {
                                     for i in data {
                                         let temp = i["status"] as! String
                                         if temp == "대여가능" {
-                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: "", returnDate: "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: "대여", boolRent: true)
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: "", returnDate: "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: "대여", boolRent: true, boolAni: true)
                                             objList.append(obj)
                                         }
                                         else {
-                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as? String ?? "", returnDate: i["returnDate"] as? String ?? "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: "불가", boolRent: false)
+                                            let obj = Object(code: i["code"] as! String, name: i["name"] as! String, rentDate: i["rentDate"] as? String ?? "", returnDate: i["returnDate"] as? String ?? "", userId: i["userId"] as! String, userPhone: i["userPhone"] as! String, status: "불가", boolRent: false, boolAni: true)
                                             objList.append(obj)
                                         }
                                         

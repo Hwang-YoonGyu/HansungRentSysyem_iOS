@@ -15,8 +15,9 @@ class Object {
     var userPhone : String
     var status : String
     var boolRent : Bool
+    var boolAni : Bool
     
-    init(code : String, name : String, rentDate : String, returnDate: String, userId : String, userPhone : String, status : String, boolRent: Bool) {
+    init(code : String, name : String, rentDate : String, returnDate: String, userId : String, userPhone : String, status : String, boolRent: Bool, boolAni: Bool) {
         self.code = code
         self.name = name
         self.rentDate = rentDate
@@ -25,6 +26,7 @@ class Object {
         self.userPhone = userPhone
         self.status = status
         self.boolRent = boolRent
+        self.boolAni = boolAni
     }
     
 }
