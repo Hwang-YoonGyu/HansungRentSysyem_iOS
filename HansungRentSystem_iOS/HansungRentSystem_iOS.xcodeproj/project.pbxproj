@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32D402F35CE64EB7109476D2 /* Pods_HansungRentSystem_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFB4AEE82BFB9D446F01DD8 /* Pods_HansungRentSystem_iOS.framework */; };
+		6E85E22D28A521390054DB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E85E22C28A521390054DB4F /* Assets.xcassets */; };
 		90D0E3AC2876C78D008D7FEC /* Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0E3AB2876C78D008D7FEC /* Noti.swift */; };
 		910E5DAA2862FCFC004D3141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DA92862FCFC004D3141 /* AppDelegate.swift */; };
 		910E5DAC2862FCFC004D3141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0798BF50D79B28A7D0AF7E2C /* Pods-HansungRentSystem_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HansungRentSystem_iOS.release.xcconfig"; path = "Target Support Files/Pods-HansungRentSystem_iOS/Pods-HansungRentSystem_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		1EFB4AEE82BFB9D446F01DD8 /* Pods_HansungRentSystem_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HansungRentSystem_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E85E22C28A521390054DB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		7AC20707C47E7A59E95FD066 /* Pods-HansungRentSystem_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HansungRentSystem_iOS.debug.xcconfig"; path = "Target Support Files/Pods-HansungRentSystem_iOS/Pods-HansungRentSystem_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		90D0E3AB2876C78D008D7FEC /* Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti.swift; sourceTree = "<group>"; };
 		910E5DA62862FCFC004D3141 /* HansungRentSystem_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HansungRentSystem_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 		910E5DA82862FCFC004D3141 /* HansungRentSystem_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6E85E22C28A521390054DB4F /* Assets.xcassets */,
 				910E5DA92862FCFC004D3141 /* AppDelegate.swift */,
 				910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */,
 				919E5864286ED0CC00E2E4E0 /* Background.swift */,
@@ -240,6 +243,7 @@
 				B82F473328A5093D001A30F0 /* logo.png in Resources */,
 				910E5DBE28630083004D3141 /* img.jpg in Resources */,
 				910E5DCB2863354A004D3141 /* apple.jpg in Resources */,
+				6E85E22D28A521390054DB4F /* Assets.xcassets in Resources */,
 				B82F473228A5093D001A30F0 /* odyssey.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
