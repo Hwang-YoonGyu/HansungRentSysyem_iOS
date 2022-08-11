@@ -32,11 +32,13 @@
 		9141762428636CFD00BD5DF2 /* LogPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762328636CFD00BD5DF2 /* LogPage.swift */; };
 		9141762628636D1E00BD5DF2 /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9141762528636D1E00BD5DF2 /* Notice.swift */; };
 		919E5865286ED0CC00E2E4E0 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919E5864286ED0CC00E2E4E0 /* Background.swift */; };
-		B84DDF8428A3D0EE00482AED /* MSI_sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF7F28A3D0EE00482AED /* MSI_sword.jpg */; };
-		B84DDF8528A3D0EE00482AED /* macbookair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8028A3D0EE00482AED /* macbookair.jpg */; };
-		B84DDF8628A3D0EE00482AED /* LG_gram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8128A3D0EE00482AED /* LG_gram.jpg */; };
-		B84DDF8728A3D0EE00482AED /* odyssey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8228A3D0EE00482AED /* odyssey.jpg */; };
-		B84DDF8828A3D0EE00482AED /* macbookpro.png in Resources */ = {isa = PBXBuildFile; fileRef = B84DDF8328A3D0EE00482AED /* macbookpro.png */; };
+		B82F472A28A50462001A30F0 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82F472928A50462001A30F0 /* Info.swift */; };
+		B82F473128A5093D001A30F0 /* macbookpro.png in Resources */ = {isa = PBXBuildFile; fileRef = B82F472B28A5093D001A30F0 /* macbookpro.png */; };
+		B82F473228A5093D001A30F0 /* odyssey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472C28A5093D001A30F0 /* odyssey.jpg */; };
+		B82F473328A5093D001A30F0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B82F472D28A5093D001A30F0 /* logo.png */; };
+		B82F473428A5093D001A30F0 /* macbookair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472E28A5093D001A30F0 /* macbookair.jpg */; };
+		B82F473528A5093D001A30F0 /* LG_gram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472F28A5093D001A30F0 /* LG_gram.jpg */; };
+		B82F473628A5093D001A30F0 /* MSI_sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F473028A5093D001A30F0 /* MSI_sword.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,11 +71,13 @@
 		9141762328636CFD00BD5DF2 /* LogPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPage.swift; sourceTree = "<group>"; };
 		9141762528636D1E00BD5DF2 /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		919E5864286ED0CC00E2E4E0 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		B84DDF7F28A3D0EE00482AED /* MSI_sword.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MSI_sword.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/MSI_sword.jpg; sourceTree = "<group>"; };
-		B84DDF8028A3D0EE00482AED /* macbookair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = macbookair.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/macbookair.jpg; sourceTree = "<group>"; };
-		B84DDF8128A3D0EE00482AED /* LG_gram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LG_gram.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/LG_gram.jpg; sourceTree = "<group>"; };
-		B84DDF8228A3D0EE00482AED /* odyssey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = odyssey.jpg; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/odyssey.jpg; sourceTree = "<group>"; };
-		B84DDF8328A3D0EE00482AED /* macbookpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = macbookpro.png; path = ../../../MinSuIsHappy/capstone/capstone/src/main/webapp/resources/img/macbookpro.png; sourceTree = "<group>"; };
+		B82F472928A50462001A30F0 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		B82F472B28A5093D001A30F0 /* macbookpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macbookpro.png; sourceTree = "<group>"; };
+		B82F472C28A5093D001A30F0 /* odyssey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = odyssey.jpg; sourceTree = "<group>"; };
+		B82F472D28A5093D001A30F0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B82F472E28A5093D001A30F0 /* macbookair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = macbookair.jpg; sourceTree = "<group>"; };
+		B82F472F28A5093D001A30F0 /* LG_gram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LG_gram.jpg; sourceTree = "<group>"; };
+		B82F473028A5093D001A30F0 /* MSI_sword.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MSI_sword.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +113,6 @@
 		910E5DA82862FCFC004D3141 /* HansungRentSystem_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B84DDF8128A3D0EE00482AED /* LG_gram.jpg */,
-				B84DDF8028A3D0EE00482AED /* macbookair.jpg */,
-				B84DDF8328A3D0EE00482AED /* macbookpro.png */,
-				B84DDF7F28A3D0EE00482AED /* MSI_sword.jpg */,
-				B84DDF8228A3D0EE00482AED /* odyssey.jpg */,
 				910E5DA92862FCFC004D3141 /* AppDelegate.swift */,
 				910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */,
 				919E5864286ED0CC00E2E4E0 /* Background.swift */,
@@ -135,10 +134,17 @@
 				910E5DB72862FCFD004D3141 /* Info.plist */,
 				910E5DBD28630083004D3141 /* img.jpg */,
 				910E5DC728633549004D3141 /* apple.jpg */,
+				B82F472F28A5093D001A30F0 /* LG_gram.jpg */,
+				B82F472D28A5093D001A30F0 /* logo.png */,
+				B82F472E28A5093D001A30F0 /* macbookair.jpg */,
+				B82F472B28A5093D001A30F0 /* macbookpro.png */,
+				B82F473028A5093D001A30F0 /* MSI_sword.jpg */,
+				B82F472C28A5093D001A30F0 /* odyssey.jpg */,
 				910E5DC828633549004D3141 /* Lg.jpg */,
 				910E5DC928633549004D3141 /* MSI.jpg */,
 				910E5DCA28633549004D3141 /* samsung.jpg */,
 				9141761928635EB700BD5DF2 /* hansung.jpg */,
+				B82F472928A50462001A30F0 /* Info.swift */,
 			);
 			path = HansungRentSystem_iOS;
 			sourceTree = "<group>";
@@ -220,20 +226,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B84DDF8828A3D0EE00482AED /* macbookpro.png in Resources */,
-				B84DDF8728A3D0EE00482AED /* odyssey.jpg in Resources */,
+				B82F473128A5093D001A30F0 /* macbookpro.png in Resources */,
+				B82F473428A5093D001A30F0 /* macbookair.jpg in Resources */,
 				910E5DCE2863354A004D3141 /* samsung.jpg in Resources */,
 				910E5DCC2863354A004D3141 /* Lg.jpg in Resources */,
 				9141761A28635EB700BD5DF2 /* hansung.jpg in Resources */,
-				B84DDF8628A3D0EE00482AED /* LG_gram.jpg in Resources */,
-				B84DDF8428A3D0EE00482AED /* MSI_sword.jpg in Resources */,
+				B82F473528A5093D001A30F0 /* LG_gram.jpg in Resources */,
 				910E5DB62862FCFD004D3141 /* LaunchScreen.storyboard in Resources */,
 				910E5DB32862FCFD004D3141 /* Assets.xcassets in Resources */,
+				B82F473628A5093D001A30F0 /* MSI_sword.jpg in Resources */,
 				910E5DCD2863354A004D3141 /* MSI.jpg in Resources */,
-				B84DDF8528A3D0EE00482AED /* macbookair.jpg in Resources */,
 				910E5DB12862FCFC004D3141 /* Main.storyboard in Resources */,
+				B82F473328A5093D001A30F0 /* logo.png in Resources */,
 				910E5DBE28630083004D3141 /* img.jpg in Resources */,
 				910E5DCB2863354A004D3141 /* apple.jpg in Resources */,
+				B82F473228A5093D001A30F0 /* odyssey.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9139D75028697D880032590A /* Object.swift in Sources */,
+				B82F472A28A50462001A30F0 /* Info.swift in Sources */,
 				919E5865286ED0CC00E2E4E0 /* Background.swift in Sources */,
 				910E5DAE2862FCFC004D3141 /* Login.swift in Sources */,
 				9141594B286CAD480081F7E2 /* Log.swift in Sources */,
