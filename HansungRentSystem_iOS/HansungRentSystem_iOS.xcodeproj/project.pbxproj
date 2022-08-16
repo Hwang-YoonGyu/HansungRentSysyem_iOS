@@ -39,6 +39,7 @@
 		B82F473428A5093D001A30F0 /* macbookair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472E28A5093D001A30F0 /* macbookair.jpg */; };
 		B82F473528A5093D001A30F0 /* LG_gram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472F28A5093D001A30F0 /* LG_gram.jpg */; };
 		B82F473628A5093D001A30F0 /* MSI_sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F473028A5093D001A30F0 /* MSI_sword.jpg */; };
+		B8C265F028AB94A20047B528 /* DetailInfo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C265EF28AB94A20047B528 /* DetailInfo1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		B82F472E28A5093D001A30F0 /* macbookair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = macbookair.jpg; sourceTree = "<group>"; };
 		B82F472F28A5093D001A30F0 /* LG_gram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LG_gram.jpg; sourceTree = "<group>"; };
 		B82F473028A5093D001A30F0 /* MSI_sword.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MSI_sword.jpg; sourceTree = "<group>"; };
+		B8C265EF28AB94A20047B528 /* DetailInfo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				910E5DCA28633549004D3141 /* samsung.jpg */,
 				9141761928635EB700BD5DF2 /* hansung.jpg */,
 				B82F472928A50462001A30F0 /* Info.swift */,
+				B8C265EF28AB94A20047B528 /* DetailInfo1.swift */,
 			);
 			path = HansungRentSystem_iOS;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				9141594D286CC0B10081F7E2 /* ExtendedDate.swift in Sources */,
 				910E5DAA2862FCFC004D3141 /* AppDelegate.swift in Sources */,
 				9141761E28636C8E00BD5DF2 /* Ask.swift in Sources */,
+				B8C265F028AB94A20047B528 /* DetailInfo1.swift in Sources */,
 				9141761C28636C5D00BD5DF2 /* Main.swift in Sources */,
 				910E5DAC2862FCFC004D3141 /* SceneDelegate.swift in Sources */,
 				9141762028636CBD00BD5DF2 /* List.swift in Sources */,
