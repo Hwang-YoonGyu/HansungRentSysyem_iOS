@@ -85,53 +85,10 @@ class Main : UIViewController {
     }
     
     @IBAction func noticeBtn(_ sender: UIButton) {
-        let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/noti?userId="+user.userId)! as URL)
-        request.httpMethod = "GET"
-
-
-        let task = URLSession.shared.dataTask(with: request as URLRequest) {
-            data, response, error in
-            if error != nil {
-                print("http connect error")
-                return
-            }
-            if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
-
-                let resultString = String(describing: responseString)
-
-                var dicData : Dictionary<String, Any> = [String : Any]()
-                do {
-                    // 딕셔너리에 데이터 저장 실시
-                    dicData = try JSONSerialization.jsonObject(with: Data(resultString.utf8), options: []) as! [String:Any]
-                    DispatchQueue.main.sync {
-                        self.notiList.removeAll() //서버에 저장
-                        if let data = dicData["Data"] as? [[String : Any]] {
-                            for i in data {
-                                let noti = Noti(userId: i["userId"] as! String, Date: i["date"] as! String, Detail: i["detail"] as! String)
-                                self.notiList.append(noti)
-                            }
-                        }
-                        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
-                        if let nvc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice {
-
-                            nvc.notiList = self.notiList
-                            //lpvc.user = self.user
-                            self.navigationController?.pushViewController(nvc, animated: true)
-                        }
-                    }
-                } catch {
-                    DispatchQueue.main.async{
-                        print(error.localizedDescription)
-                        let alert = UIAlertController(title:"오류",message: "API서버 오류입니다. 잠시 후에 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
-                            //확인 버튼 만들기
-                        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                        alert.addAction(ok)
-                        self.present(alert,animated: true,completion: nil)
-                    }
-                }
-            }
+        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let ivc = storyBoard?.instantiateViewController(withIdentifier: "Notice") as? Notice{
+        self.navigationController?.pushViewController(ivc, animated: true)
         }
-        task.resume()
     }
 
 
