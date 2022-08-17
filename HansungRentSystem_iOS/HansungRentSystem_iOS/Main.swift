@@ -133,12 +133,16 @@ class Main : UIViewController {
         }
         task.resume()
     }
-    @IBAction func info(_ sender: UIButton) {
-        
-    }
+
 
     @IBAction func LogoutBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    @IBAction func infoBtn(_ sender: UIButton) {
+        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let ivc = storyBoard?.instantiateViewController(withIdentifier: "Info") as? Info{
+        self.navigationController?.pushViewController(ivc, animated: true)
+        }
     }
 }
 

@@ -7,22 +7,21 @@
 
 import UIKit
 
-class Info: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    var infoList = 
+class Info: UIViewController{
 
-    @IBOutlet weak var tableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        
+    }
+    @IBAction func backBtn(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func macProDetail(_ sender: UIButton) {
+        let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let dvc1 = storyBoard?.instantiateViewController(withIdentifier: "macPro") as? DetailInfo1 {
+            self.navigationController?.pushViewController(dvc1, animated: true)
+        }
     }
 }
 
-extension Info {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
-    }
-    
-}
