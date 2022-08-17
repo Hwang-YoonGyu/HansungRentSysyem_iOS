@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		32D402F35CE64EB7109476D2 /* Pods_HansungRentSystem_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EFB4AEE82BFB9D446F01DD8 /* Pods_HansungRentSystem_iOS.framework */; };
-		6E85E22D28A521390054DB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E85E22C28A521390054DB4F /* Assets.xcassets */; };
 		90D0E3AC2876C78D008D7FEC /* Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0E3AB2876C78D008D7FEC /* Noti.swift */; };
 		910E5DAA2862FCFC004D3141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DA92862FCFC004D3141 /* AppDelegate.swift */; };
 		910E5DAC2862FCFC004D3141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */; };
@@ -40,13 +39,12 @@
 		B82F473428A5093D001A30F0 /* macbookair.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472E28A5093D001A30F0 /* macbookair.jpg */; };
 		B82F473528A5093D001A30F0 /* LG_gram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F472F28A5093D001A30F0 /* LG_gram.jpg */; };
 		B82F473628A5093D001A30F0 /* MSI_sword.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B82F473028A5093D001A30F0 /* MSI_sword.jpg */; };
-		B8C265F028AB94A20047B528 /* DetailInfo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C265EF28AB94A20047B528 /* DetailInfo1.swift */; };
+		B8C265F028AB94A20047B528 /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C265EF28AB94A20047B528 /* DetailInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0798BF50D79B28A7D0AF7E2C /* Pods-HansungRentSystem_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HansungRentSystem_iOS.release.xcconfig"; path = "Target Support Files/Pods-HansungRentSystem_iOS/Pods-HansungRentSystem_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		1EFB4AEE82BFB9D446F01DD8 /* Pods_HansungRentSystem_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HansungRentSystem_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6E85E22C28A521390054DB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		7AC20707C47E7A59E95FD066 /* Pods-HansungRentSystem_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HansungRentSystem_iOS.debug.xcconfig"; path = "Target Support Files/Pods-HansungRentSystem_iOS/Pods-HansungRentSystem_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		90D0E3AB2876C78D008D7FEC /* Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti.swift; sourceTree = "<group>"; };
 		910E5DA62862FCFC004D3141 /* HansungRentSystem_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HansungRentSystem_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +79,7 @@
 		B82F472E28A5093D001A30F0 /* macbookair.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = macbookair.jpg; sourceTree = "<group>"; };
 		B82F472F28A5093D001A30F0 /* LG_gram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LG_gram.jpg; sourceTree = "<group>"; };
 		B82F473028A5093D001A30F0 /* MSI_sword.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MSI_sword.jpg; sourceTree = "<group>"; };
-		B8C265EF28AB94A20047B528 /* DetailInfo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo1.swift; sourceTree = "<group>"; };
+		B8C265EF28AB94A20047B528 /* DetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,7 @@
 		910E5DA82862FCFC004D3141 /* HansungRentSystem_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6E85E22C28A521390054DB4F /* Assets.xcassets */,
+				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DA92862FCFC004D3141 /* AppDelegate.swift */,
 				910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */,
 				919E5864286ED0CC00E2E4E0 /* Background.swift */,
@@ -135,7 +133,6 @@
 				9141594C286CC0B10081F7E2 /* ExtendedDate.swift */,
 				910E5DAF2862FCFC004D3141 /* Main.storyboard */,
 				910E5DB42862FCFD004D3141 /* LaunchScreen.storyboard */,
-				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DB72862FCFD004D3141 /* Info.plist */,
 				910E5DBD28630083004D3141 /* img.jpg */,
 				910E5DC728633549004D3141 /* apple.jpg */,
@@ -150,7 +147,7 @@
 				910E5DCA28633549004D3141 /* samsung.jpg */,
 				9141761928635EB700BD5DF2 /* hansung.jpg */,
 				B82F472928A50462001A30F0 /* Info.swift */,
-				B8C265EF28AB94A20047B528 /* DetailInfo1.swift */,
+				B8C265EF28AB94A20047B528 /* DetailInfo.swift */,
 			);
 			path = HansungRentSystem_iOS;
 			sourceTree = "<group>";
@@ -246,7 +243,6 @@
 				B82F473328A5093D001A30F0 /* logo.png in Resources */,
 				910E5DBE28630083004D3141 /* img.jpg in Resources */,
 				910E5DCB2863354A004D3141 /* apple.jpg in Resources */,
-				6E85E22D28A521390054DB4F /* Assets.xcassets in Resources */,
 				B82F473228A5093D001A30F0 /* odyssey.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +308,7 @@
 				9141594D286CC0B10081F7E2 /* ExtendedDate.swift in Sources */,
 				910E5DAA2862FCFC004D3141 /* AppDelegate.swift in Sources */,
 				9141761E28636C8E00BD5DF2 /* Ask.swift in Sources */,
-				B8C265F028AB94A20047B528 /* DetailInfo1.swift in Sources */,
+				B8C265F028AB94A20047B528 /* DetailInfo.swift in Sources */,
 				9141761C28636C5D00BD5DF2 /* Main.swift in Sources */,
 				910E5DAC2862FCFC004D3141 /* SceneDelegate.swift in Sources */,
 				9141762028636CBD00BD5DF2 /* List.swift in Sources */,

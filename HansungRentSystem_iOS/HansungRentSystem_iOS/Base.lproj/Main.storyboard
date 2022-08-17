@@ -634,7 +634,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
                                                         <connections>
-                                                            <action selector="macProDetail:" destination="eQg-M4-weg" eventType="touchUpInside" id="2fN-n6-2j2"/>
+                                                            <action selector="detailBtn1:" destination="eQg-M4-weg" eventType="touchUpInside" id="XE0-hS-0mk"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -677,6 +677,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn2:" destination="eQg-M4-weg" eventType="touchUpInside" id="Y40-53-UHJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -718,6 +721,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn3:" destination="eQg-M4-weg" eventType="touchUpInside" id="2OY-lB-OCi"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -759,6 +765,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn4:" destination="eQg-M4-weg" eventType="touchUpInside" id="XRY-TX-Ptk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -800,6 +809,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn5:" destination="eQg-M4-weg" eventType="touchUpInside" id="cPD-ik-yiY"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -841,6 +853,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn6:" destination="eQg-M4-weg" eventType="touchUpInside" id="ch6-am-nZj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -882,6 +897,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn7:" destination="eQg-M4-weg" eventType="touchUpInside" id="gga-Mq-Ffq"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -923,6 +941,9 @@
                                                         <rect key="frame" x="325.5" y="109" width="72.5" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="상세보기"/>
+                                                        <connections>
+                                                            <action selector="detailBtn8:" destination="eQg-M4-weg" eventType="touchUpInside" id="ZkT-bv-A1x"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -961,7 +982,7 @@
                                     <action selector="backBtn:" destination="eQg-M4-weg" eventType="touchUpInside" id="aNF-A8-CyD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자세한 정보는 상세보기 버튼을 누ㄹ러옹요요ㅛㅇ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKS-Sy-auk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자세한 정보는 상세보기 버튼을 누르세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKS-Sy-auk">
                                 <rect key="frame" x="40" y="94" width="334" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5eE-AN-1NJ"/>
@@ -1206,10 +1227,10 @@
             </objects>
             <point key="canvasLocation" x="138" y="777"/>
         </scene>
-        <!--Detail Info1-->
+        <!--Detail Info-->
         <scene sceneID="tJq-Z9-bQB">
             <objects>
-                <viewController storyboardIdentifier="macPro" id="WCv-8X-lpi" customClass="DetailInfo1" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailInfo" id="WCv-8X-lpi" customClass="DetailInfo" customModule="HansungRentSystem_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oWU-NK-5XS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1297,6 +1318,16 @@
                             <constraint firstItem="4AX-cS-IWe" firstAttribute="top" secondItem="UvX-4r-xMC" secondAttribute="bottom" constant="40" id="q0q-GH-6wh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Image" destination="UvX-4r-xMC" id="rRc-Ih-qJv"/>
+                        <outlet property="codeText" destination="4rH-lQ-jA9" id="z5z-db-Yyf"/>
+                        <outlet property="cpuText" destination="g3Z-kQ-KzV" id="Elp-4Q-qln"/>
+                        <outlet property="graphicText" destination="IGb-a9-Z3m" id="gqv-OH-ZUC"/>
+                        <outlet property="memoryText" destination="lpG-S6-V05" id="C6t-xS-lsb"/>
+                        <outlet property="nameText" destination="gMP-SI-0mh" id="vre-fs-CzT"/>
+                        <outlet property="screenText" destination="fMc-LG-qxd" id="P68-lD-iWN"/>
+                        <outlet property="weightText" destination="Sgb-a5-d0E" id="vcD-XO-hlF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWO-5c-Q77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
