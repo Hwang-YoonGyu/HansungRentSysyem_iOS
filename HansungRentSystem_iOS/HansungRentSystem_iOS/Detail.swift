@@ -38,7 +38,7 @@ class Detail : UIViewController {
             }
         }
         else {
-            let request = NSMutableURLRequest(url: NSURL(string: "http://localhost:8080/API/Rent?code="+obj.code+"&userId="+user.userId+"&userPhone="+user.userPhone+"&rentDate="+obj.rentDate+"&returnDate="+obj.returnDate)! as URL)
+            let request = NSMutableURLRequest(url: NSURL(string: "http://13.125.253.41:8080/API/Rent?code="+obj.code+"&userId="+user.userId+"&userPhone="+user.userPhone+"&rentDate="+obj.rentDate+"&returnDate="+obj.returnDate)! as URL)
             request.httpMethod = "GET"
             
             
