@@ -1139,23 +1139,20 @@
                                     <action selector="backBtn:" destination="8wc-52-BER" eventType="touchUpInside" id="wUl-gN-Fim"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="노트북 대여 신청 및 반납" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dph-gl-Td5">
-                                <rect key="frame" x="20" y="134" width="163" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노트북 대여 신청 및 반납" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dph-gl-Td5">
+                                <rect key="frame" x="16" y="134" width="163" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이용 수칙" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5u-M3-DfT">
-                                <rect key="frame" x="20" y="348" width="63" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용 수칙" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5u-M3-DfT">
+                                <rect key="frame" x="16" y="348.5" width="63" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="경고문" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaD-eT-grK">
-                                <rect key="frame" x="20" y="517" width="45" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="경고문" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaD-eT-grK">
+                                <rect key="frame" x="16" y="509" width="44.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1169,45 +1166,102 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GfX-di-9ZS">
-                                <rect key="frame" x="20" y="153" width="354" height="166.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">1.  본교 컴퓨터공학부 학생을 대상으로 대여가 가능합니다.       2. 대여버튼 클릭 -&gt; 과사무실 방문(신분증/학생증 본인확인 필요) -&gt; 물품수령                                                                                      3. 1개월 장기대여를 원칙으로 합니다.                                                4. 노트북 반납 시, 대여신청자는 반드시 관리자의 입회 아래 노트북의 사용 가능 여부를 확인 받아야 정상적인 반납이 완료된 것으로 간주합니다.                                                                                                   5. 노트북 반납은 대여 신청자 본인의 직접 반납을 원칙으로 합니다.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qR8-ML-iqQ">
-                                <rect key="frame" x="20" y="366" width="354" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">1. 노트북 대여시 대여 신청자는 반드시 노트북의 정상 가동 여부를   확인하여야 합니다. 또한 대여 후 노트북에 문제가 발생 했다면 즉시 컴퓨터공학과 과사무실(공학관A동 104호)에서 확인을 받으셔야 합니다.                                                                                                             2. 연장을 원할 시 반납일 하루 전 과사무실 방문 후 연장해야 합니다.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uaa-OR-XgT">
-                                <rect key="frame" x="20" y="537" width="386" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">1. 대여받은 노트북은 반드시 기한 내에 반납하여야 하며 미반납의 경우 정상적인 반납이 이루어질 때까지 불이익을 감수해야 함을 안내드립니다.                                                                                                             2. 경고사항                                                                                                            - 대리반납                                                                                             - 대여시간 이후 반납                                                                                         - 노트북 전원을 끄지 않은 상태로 반납</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="한성대학교 공학관 A동 104호                            02-760-4137,4438,5772" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tcl-7f-A3H">
-                                <rect key="frame" x="19" y="719" width="386" height="131"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="전화번호 / 수령 장소" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-47-mtm">
-                                <rect key="frame" x="20" y="702" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호 / 수령 장소" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-47-mtm">
+                                <rect key="frame" x="16" y="711.5" width="135" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.  본교 컴퓨터공학부 학생을 대상으로 대여가 가능합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruK-wX-LUB">
+                                <rect key="frame" x="32" y="162.5" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 대여버튼 클릭 -&gt; 과사무실 방문(신분증/학생증 본인확인 필요) -&gt; 물품수령" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-29-KHk">
+                                <rect key="frame" x="32" y="180.5" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. 1개월 장기대여를 원칙으로 합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVF-wa-Dwb">
+                                <rect key="frame" x="32" y="216.5" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. 노트북 반납 시, 대여신청자는 반드시 관리자의 입회 아래 노트북의 사용 가능 여부를 확인 받아야 정상적인 반납이 완료된 것으로 간주합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FQ-v6-WpQ">
+                                <rect key="frame" x="32" y="234.5" width="374" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. 노트북 반납은 대여 신청자 본인의 직접 반납을 원칙으로 합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qb-Xs-1FZ">
+                                <rect key="frame" x="32" y="288.5" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 노트북 대여시 대여 신청자는 반드시 노트북의 정상 가동 여부를 확인하여야 합니다. 또한 대여 후 노트북에 문제가 발생 했다면 즉시 컴퓨터공학과 과사무실(공학관A동 104호)에서 확인을 받으셔야 합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68V-0l-lq6">
+                                <rect key="frame" x="32" y="377" width="374" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 연장을 원할 시 반납일 하루 전 과사무실 방문 후 연장해야 합니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sn-lJ-ngp">
+                                <rect key="frame" x="32" y="449" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 대여받은 노트북은 반드시 기한 내에 반납하여야 하며 미반납의 경우 정상적인 반납이 이루어질 때까지 불이익을 감수해야 함을 안내드립니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-Pw-4pM">
+                                <rect key="frame" x="32" y="537.5" width="374" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 경고사항" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtD-RY-Unr">
+                                <rect key="frame" x="32" y="591.5" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zwm-aK-U1j">
+                                <rect key="frame" x="32" y="617.5" width="374" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 대리반납" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYc-BZ-fJ8">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 대여시간 이후 반납" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if2-uY-wmh">
+                                        <rect key="frame" x="0.0" y="26" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 노트북 전원을 끄지 않은 상태로 반납" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVn-0r-Z35">
+                                        <rect key="frame" x="0.0" y="52" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VVn-0r-Z35" firstAttribute="top" secondItem="if2-uY-wmh" secondAttribute="bottom" constant="8" symbolic="YES" id="5aV-UB-Mrz"/>
+                                    <constraint firstItem="if2-uY-wmh" firstAttribute="top" secondItem="SYc-BZ-fJ8" secondAttribute="bottom" constant="8" id="Mca-Wo-vwc"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한성대학교 공학관 A동 104호" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF0-37-T5J">
+                                <rect key="frame" x="32" y="740" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02-760-4137,4438,5772" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kk-zI-mBN">
+                                <rect key="frame" x="32" y="758" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1215,17 +1269,64 @@
                         <viewLayoutGuide key="safeArea" id="QDB-fe-I9d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="68V-0l-lq6" secondAttribute="trailing" constant="8" id="0QF-Ep-sel"/>
+                            <constraint firstItem="rGz-29-KHk" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="1GV-ht-xcx"/>
+                            <constraint firstItem="68V-0l-lq6" firstAttribute="top" secondItem="L5u-M3-DfT" secondAttribute="bottom" constant="8" id="391-8z-1DX"/>
+                            <constraint firstItem="1sn-lJ-ngp" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="5Fl-mk-P11"/>
+                            <constraint firstItem="aUB-Pw-4pM" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="6EG-Dj-Gdo"/>
+                            <constraint firstItem="mtD-RY-Unr" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="74g-j7-P9j"/>
+                            <constraint firstItem="4qb-Xs-1FZ" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="7aH-lB-Y9L"/>
+                            <constraint firstAttribute="trailing" secondItem="4qb-Xs-1FZ" secondAttribute="trailing" constant="8" id="7mh-D2-5GB"/>
+                            <constraint firstItem="zF0-37-T5J" firstAttribute="top" secondItem="uXK-47-mtm" secondAttribute="bottom" constant="8" id="8tp-bN-qhY"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="Zwm-aK-U1j" secondAttribute="trailing" constant="8" id="95g-Nv-L43"/>
+                            <constraint firstItem="dVF-wa-Dwb" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="BRK-nY-dzl"/>
+                            <constraint firstItem="L5u-M3-DfT" firstAttribute="top" secondItem="4qb-Xs-1FZ" secondAttribute="bottom" constant="24" id="EoV-Jt-kL2"/>
+                            <constraint firstItem="9kk-zI-mBN" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="Eou-Mi-GyR"/>
+                            <constraint firstItem="9kk-zI-mBN" firstAttribute="top" secondItem="zF0-37-T5J" secondAttribute="bottom" id="EpF-i8-0p0"/>
+                            <constraint firstItem="SaD-eT-grK" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="16" id="GIK-dn-bws"/>
                             <constraint firstItem="fsB-Z6-Izb" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" id="Gnx-cl-oZH"/>
                             <constraint firstItem="LP8-8u-fEf" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="40" id="JTL-SZ-hYb"/>
+                            <constraint firstItem="Dph-gl-Td5" firstAttribute="top" secondItem="LP8-8u-fEf" secondAttribute="bottom" constant="20" id="JgJ-4D-5zZ"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="mtD-RY-Unr" secondAttribute="trailing" constant="8" id="KqL-WY-oH4"/>
+                            <constraint firstItem="4qb-Xs-1FZ" firstAttribute="top" secondItem="0FQ-v6-WpQ" secondAttribute="bottom" id="NWd-Mf-3jR"/>
+                            <constraint firstAttribute="trailing" secondItem="0FQ-v6-WpQ" secondAttribute="trailing" constant="8" id="Ncw-QP-C9U"/>
+                            <constraint firstItem="ruK-wX-LUB" firstAttribute="top" secondItem="Dph-gl-Td5" secondAttribute="bottom" constant="8" id="QND-sV-3Gf"/>
+                            <constraint firstItem="1sn-lJ-ngp" firstAttribute="top" secondItem="68V-0l-lq6" secondAttribute="bottom" id="RvL-tE-njo"/>
+                            <constraint firstItem="Zwm-aK-U1j" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="TAF-Nc-275"/>
+                            <constraint firstAttribute="trailing" secondItem="rGz-29-KHk" secondAttribute="trailing" constant="8" id="UaG-cI-7fe"/>
+                            <constraint firstItem="SaD-eT-grK" firstAttribute="top" secondItem="1sn-lJ-ngp" secondAttribute="bottom" constant="24" id="Wpp-FH-BOc"/>
+                            <constraint firstItem="Zwm-aK-U1j" firstAttribute="top" secondItem="mtD-RY-Unr" secondAttribute="bottom" constant="8" id="Zak-mm-yOl"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="1sn-lJ-ngp" secondAttribute="trailing" constant="8" id="bQt-lk-APZ"/>
+                            <constraint firstItem="68V-0l-lq6" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="bsV-NL-9rg"/>
+                            <constraint firstItem="Dph-gl-Td5" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="16" id="c0d-Cs-BNl"/>
+                            <constraint firstItem="uXK-47-mtm" firstAttribute="top" secondItem="Zwm-aK-U1j" secondAttribute="bottom" constant="24" id="dw5-Ae-9dt"/>
+                            <constraint firstItem="0FQ-v6-WpQ" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="eMz-ex-S2b"/>
+                            <constraint firstItem="uXK-47-mtm" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="16" id="egU-5k-nOy"/>
                             <constraint firstItem="fsB-Z6-Izb" firstAttribute="top" secondItem="QDB-fe-I9d" secondAttribute="top" id="god-M7-Zjf"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="ruK-wX-LUB" secondAttribute="trailing" constant="8" id="iib-93-1qh"/>
                             <constraint firstItem="LP8-8u-fEf" firstAttribute="top" secondItem="QDB-fe-I9d" secondAttribute="top" constant="40" id="ime-XE-yBg"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="9kk-zI-mBN" secondAttribute="trailing" constant="8" id="izx-Pe-7Hn"/>
+                            <constraint firstItem="L5u-M3-DfT" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="16" id="jf7-1T-Sx1"/>
+                            <constraint firstItem="mtD-RY-Unr" firstAttribute="top" secondItem="aUB-Pw-4pM" secondAttribute="bottom" id="kFa-gH-8iy"/>
+                            <constraint firstItem="rGz-29-KHk" firstAttribute="top" secondItem="ruK-wX-LUB" secondAttribute="bottom" id="n0O-No-UZ7"/>
+                            <constraint firstItem="0FQ-v6-WpQ" firstAttribute="top" secondItem="dVF-wa-Dwb" secondAttribute="bottom" id="pas-gf-l4C"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="dVF-wa-Dwb" secondAttribute="trailing" constant="8" id="pkg-Pf-xhr"/>
+                            <constraint firstItem="dVF-wa-Dwb" firstAttribute="top" secondItem="rGz-29-KHk" secondAttribute="bottom" id="qNV-cV-Qbz"/>
+                            <constraint firstItem="aUB-Pw-4pM" firstAttribute="top" secondItem="SaD-eT-grK" secondAttribute="bottom" constant="8" id="rXT-2s-PE3"/>
+                            <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="zF0-37-T5J" secondAttribute="trailing" constant="8" id="sHg-E1-yhY"/>
+                            <constraint firstAttribute="trailing" secondItem="aUB-Pw-4pM" secondAttribute="trailing" constant="8" id="t2A-O5-004"/>
+                            <constraint firstItem="ruK-wX-LUB" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="ulz-k0-Po0"/>
+                            <constraint firstItem="zF0-37-T5J" firstAttribute="leading" secondItem="QDB-fe-I9d" secondAttribute="leading" constant="32" id="yRZ-dw-GiZ"/>
                             <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="LP8-8u-fEf" secondAttribute="trailing" constant="40" id="zy8-Za-XKt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label1_2" destination="rGz-29-KHk" id="gvs-Vu-76R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8G-E7-RsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="777"/>
+            <point key="canvasLocation" x="137.68115942028987" y="776.78571428571422"/>
         </scene>
         <!--Detail Info-->
         <scene sceneID="tJq-Z9-bQB">
@@ -1342,9 +1443,6 @@
         <image name="macbookair.jpg" width="1500" height="881"/>
         <image name="macbookpro.png" width="473.25" height="300"/>
         <image name="odyssey.jpg" width="600" height="400"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
