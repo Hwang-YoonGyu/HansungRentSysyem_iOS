@@ -1320,9 +1320,6 @@
                             <constraint firstItem="QDB-fe-I9d" firstAttribute="trailing" secondItem="LP8-8u-fEf" secondAttribute="trailing" constant="40" id="zy8-Za-XKt"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="label1_2" destination="rGz-29-KHk" id="gvs-Vu-76R"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8G-E7-RsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
