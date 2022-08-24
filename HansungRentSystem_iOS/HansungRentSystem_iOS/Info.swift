@@ -20,12 +20,12 @@ class Info: UIViewController{
     @IBAction func detailBtn1(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let dvc = storyBoard?.instantiateViewController(withIdentifier: "DetailInfo") as? DetailInfo {
-            dvc.name = "애플MacBookPro"
+            dvc.name = "macbookPro"
             dvc.code = "MVVJ2KH/A"
             dvc.image = UIImage(named: "macbookpro.png")
-            dvc.cpu = "CPU : i7-9750H (2.6GHz)"
+            dvc.cpu = "CPU : i7-9750H"
             dvc.memory = "메모리 : 16GB"
-            dvc.graphic = "그래픽카드 : 라데온 Pro 5300M"
+            dvc.graphic = "GPU : 라데온 Pro 5300M"
             dvc.screen = "화면 : 40.8cm(16인치)"
             dvc.weight = "무게 : 2.0kg"
             
@@ -35,12 +35,12 @@ class Info: UIViewController{
     @IBAction func detailBtn2(_ sender: UIButton) {
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let dvc = storyBoard?.instantiateViewController(withIdentifier: "DetailInfo") as? DetailInfo {
-            dvc.name = "애플MacBookAir"
+            dvc.name = "macbookAir"
             dvc.code = "MGN63KH/A"
             dvc.image = UIImage(named: "macbookair.jpg")
-            dvc.cpu = "CPU : 실리콘 M1"
+            dvc.cpu = "CPU : Apple Silicon M1"
             dvc.memory = "메모리 : 8GB"
-            dvc.graphic = "그래픽카드 : M1 7 core"
+            dvc.graphic = "GPU : Apple Silicon M1"
             dvc.screen = "화면 : 33.78cm(13.3인치)"
             dvc.weight = "무게 : 1.29kg"
             
@@ -53,7 +53,7 @@ class Info: UIViewController{
             dvc.name = "삼성Odyssey"
             dvc.code = "NT800G5W-XD71"
             dvc.image = UIImage(named: "odyssey.jpg")
-            dvc.cpu = "CPU : i7-7700HQ (2.8GHz)"
+            dvc.cpu = "CPU : i7-7700HQ"
             dvc.memory = "메모리 : 8GB"
             dvc.graphic = "그래픽카드 : GTX1050"
             dvc.screen = "화면 : 39.62cm(15.6인치)"
@@ -68,7 +68,7 @@ class Info: UIViewController{
             dvc.name = "삼성Odyssey"
             dvc.code = "NT800G5W-XD7S"
             dvc.image = UIImage(named: "odyssey.jpg")
-            dvc.cpu = "CPU : i7-7700HQ (2.8GHz)"
+            dvc.cpu = "CPU : i7-7700HQ"
             dvc.memory = "메모리 : 8GB"
             dvc.graphic = "그래픽카드 : GTX1050"
             dvc.screen = "화면 : 39.62cm(15.6인치)"
@@ -83,9 +83,9 @@ class Info: UIViewController{
             dvc.name = "삼성Odyssey"
             dvc.code = "NT800G5W-GD7A"
             dvc.image = UIImage(named: "odyssey.jpg")
-            dvc.cpu = "CPU : i7-7700HQ (2.8GHz)"
+            dvc.cpu = "CPU : i7-7700HQ"
             dvc.memory = "메모리 : 8GB"
-            dvc.graphic = "그래픽카드 : GTX1060"
+            dvc.graphic = "그래픽카드 : GTX1050"
             dvc.screen = "화면 : 39.62cm(15.6인치)"
             dvc.weight = "무게 : 2.5kg"
             
@@ -96,9 +96,9 @@ class Info: UIViewController{
         let storyBoard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let dvc = storyBoard?.instantiateViewController(withIdentifier: "DetailInfo") as? DetailInfo {
             dvc.name = "삼성Odyssey"
-            dvc.code = "NT801G5H-X01/C"
+            dvc.code = "NT800G5W-X01/C"
             dvc.image = UIImage(named: "odyssey.jpg")
-            dvc.cpu = "CPU : i7-7700HQ (2.8GHz)"
+            dvc.cpu = "CPU : i7-7700HQ"
             dvc.memory = "메모리 : 16GB"
             dvc.graphic = "그래픽카드 : GTX1060"
             dvc.screen = "화면 : 39.62cm(15.6인치)"
@@ -113,9 +113,9 @@ class Info: UIViewController{
             dvc.name = "LG그램15"
             dvc.code = "15Z90N-VP70ML"
             dvc.image = UIImage(named: "LG_gram.jpg")
-            dvc.cpu = "CPU : 10세대 쿼드코어 i7"
+            dvc.cpu = "CPU : i7-1065G7"
             dvc.memory = "메모리 : 8GB"
-            dvc.graphic = "그래픽카드 : 인텔 Iris Plus Graphics"
+            dvc.graphic = "GPU : 인텔 Iris Plus Graphics"
             dvc.screen = "화면 : 39.62cm(15.6인치)"
             dvc.weight = "무게 : 1120g"
             
@@ -130,7 +130,7 @@ class Info: UIViewController{
             dvc.image = UIImage(named: "MSI_sword.jpg")
             dvc.cpu = "CPU : 코어i7-11세대"
             dvc.memory = "메모리 : 8GB"
-            dvc.graphic = "그래픽카드 : RTX3050 Ti"
+            dvc.graphic = "GPU : RTX3050 Ti"
             dvc.screen = "화면 : 39.62cm(15.6인치)"
             dvc.weight = "무게 : 2.25kg"
             
