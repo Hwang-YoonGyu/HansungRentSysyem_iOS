@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ViewAnimator
 import UIKit
 class List : UIViewController, UITableViewDataSource, UITableViewDelegate {
     
