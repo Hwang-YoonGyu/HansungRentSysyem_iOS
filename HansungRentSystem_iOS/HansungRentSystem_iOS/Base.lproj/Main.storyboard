@@ -143,9 +143,9 @@
                                     <constraint firstAttribute="height" constant="200" id="gRz-jh-JVZ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="기자재 정보"/>
+                                <buttonConfiguration key="configuration" style="filled" title="공지사항"/>
                                 <connections>
-                                    <action selector="infoBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="Ec7-kc-xI5"/>
+                                    <action selector="noticeBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="txK-ON-cT4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YK6-Wt-GDR">
@@ -155,9 +155,9 @@
                                     <constraint firstAttribute="height" constant="200" id="qvJ-sL-Fvh"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="알림"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="기자재 정보"/>
                                 <connections>
-                                    <action selector="noticeBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="cag-St-deN"/>
+                                    <action selector="infoBtn:" destination="ugh-JI-HO4" eventType="touchUpInside" id="mi5-Xk-H4v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqp-va-rWA">
