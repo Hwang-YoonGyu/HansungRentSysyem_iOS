@@ -17,6 +17,42 @@ class Main : UIViewController {
     
     override func viewDidLoad() {
         userText.text = user.userId + " " + user.userName
+        
+        print(user.fcmToken)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://13.125.253.41:8080/API/fcm/set?id="+user.userId+"&password="+user.password+"&token="+user.fcmToken)! as URL)
+        request.httpMethod = "GET"
+        
+        
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            if error != nil {
+                print("http connect error")
+                return
+            }
+            if let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue) {
+            
+                let resultString = String(describing: responseString)
+            
+                do {
+        
+                    print(resultString)
+
+                } catch {
+                    DispatchQueue.main.async{
+                        print(error.localizedDescription)
+                        let alert = UIAlertController(title:"오류",message: "API서버 오류입니다. 잠시 후에 다시 시도해 주세요.",preferredStyle: UIAlertController.Style.alert)
+                        //확인 버튼 만들기
+                        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                        alert.addAction(ok)
+                        self.present(alert,animated: true,completion: nil)
+                    }
+                }
+            }
+        }
+        task.resume()
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
               }

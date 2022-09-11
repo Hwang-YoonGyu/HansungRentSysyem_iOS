@@ -13,7 +13,7 @@ class User {
     var password : String
     var userName : String
     var isRented : String
-    
+    var fcmToken : String
 //    init(userId : String, password: String, userName: String, isRented: String, userPhone: String) {
 //        self.userId = userId
 //        self.password = password
@@ -27,6 +27,7 @@ class User {
         self.userName = ""
         self.isRented = ""
         self.userPhone = ""
+        self.fcmToken = ""
     }
     
 
