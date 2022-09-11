@@ -19,7 +19,7 @@ class Main : UIViewController {
         userText.text = user.userId + " " + user.userName
         
         print(user.fcmToken)
-        let request = NSMutableURLRequest(url: NSURL(string: "http://13.125.253.41:8080/API/fcm/set?id="+user.userId+"&password="+user.password+"&token="+user.fcmToken)! as URL)
+        let request = NSMutableURLRequest(url: NSURL(string: "http://13.125.253.41:8080/API/fcm/set?userId="+user.userId+"&password="+user.password+"&token="+user.fcmToken)! as URL)
         request.httpMethod = "GET"
         
         
