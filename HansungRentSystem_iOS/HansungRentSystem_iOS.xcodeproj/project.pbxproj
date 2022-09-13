@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EADDDBC28D08A1500011BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EADDDBB28D08A1500011BDA /* Assets.xcassets */; };
 		90D0E3AC2876C78D008D7FEC /* Noti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0E3AB2876C78D008D7FEC /* Noti.swift */; };
 		910E5DAA2862FCFC004D3141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DA92862FCFC004D3141 /* AppDelegate.swift */; };
 		910E5DAC2862FCFC004D3141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */; };
 		910E5DAE2862FCFC004D3141 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910E5DAD2862FCFC004D3141 /* Login.swift */; };
 		910E5DB12862FCFC004D3141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DAF2862FCFC004D3141 /* Main.storyboard */; };
-		910E5DB32862FCFD004D3141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DB22862FCFD004D3141 /* Assets.xcassets */; };
 		910E5DB62862FCFD004D3141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DB42862FCFD004D3141 /* LaunchScreen.storyboard */; };
 		910E5DBE28630083004D3141 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DBD28630083004D3141 /* img.jpg */; };
 		910E5DCB2863354A004D3141 /* apple.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 910E5DC728633549004D3141 /* apple.jpg */; };
@@ -45,13 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EADDDBB28D08A1500011BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		90D0E3AB2876C78D008D7FEC /* Noti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti.swift; sourceTree = "<group>"; };
 		910E5DA62862FCFC004D3141 /* HansungRentSystem_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HansungRentSystem_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		910E5DA92862FCFC004D3141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		910E5DAD2862FCFC004D3141 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		910E5DB02862FCFC004D3141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		910E5DB22862FCFD004D3141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		910E5DB52862FCFD004D3141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		910E5DB72862FCFD004D3141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		910E5DBD28630083004D3141 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		910E5DA82862FCFC004D3141 /* HansungRentSystem_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				6EADDDBB28D08A1500011BDA /* Assets.xcassets */,
 				919BC3C828BD8DDA0077CC76 /* HansungRentSystem_iOS.entitlements */,
-				910E5DB22862FCFD004D3141 /* Assets.xcassets */,
 				910E5DA92862FCFC004D3141 /* AppDelegate.swift */,
 				910E5DAB2862FCFC004D3141 /* SceneDelegate.swift */,
 				919E5864286ED0CC00E2E4E0 /* Background.swift */,
@@ -240,7 +240,6 @@
 				9141761A28635EB700BD5DF2 /* hansung.jpg in Resources */,
 				B82F473528A5093D001A30F0 /* LG_gram.jpg in Resources */,
 				910E5DB62862FCFD004D3141 /* LaunchScreen.storyboard in Resources */,
-				910E5DB32862FCFD004D3141 /* Assets.xcassets in Resources */,
 				B82F473628A5093D001A30F0 /* MSI_sword.jpg in Resources */,
 				919BC3CA28BD930E0077CC76 /* GoogleService-Info.plist in Resources */,
 				910E5DCD2863354A004D3141 /* MSI.jpg in Resources */,
@@ -248,6 +247,7 @@
 				B82F473328A5093D001A30F0 /* logo.png in Resources */,
 				910E5DBE28630083004D3141 /* img.jpg in Resources */,
 				910E5DCB2863354A004D3141 /* apple.jpg in Resources */,
+				6EADDDBC28D08A1500011BDA /* Assets.xcassets in Resources */,
 				B82F473228A5093D001A30F0 /* odyssey.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
