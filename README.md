@@ -2,12 +2,12 @@
 HansungRentSystem_iOS
 Made by 황윤규, 조진웅, 유지연  
 
-#사용스택  
+### 사용스택  
 Xcode  
 Swift  
 Self-made Spring web server MySQL Service API  
 
-#적용 기술  
+### 적용 기술  
 자체 API서버와 통신  
 FCM알림을 수신  
 
