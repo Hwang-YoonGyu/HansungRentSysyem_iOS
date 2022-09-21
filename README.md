@@ -1,4 +1,4 @@
-# 한성대학교 기가재 대여 통합 시스템 iOS앱  
+# 한성대학교 기자재 대여 통합 시스템 iOS앱  
 HansungRentSystem_iOS
 Made by 황윤규, 조진웅, 유지연  
 
